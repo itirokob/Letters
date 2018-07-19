@@ -57,7 +57,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pdJ-tf-Wej">
-                                <rect key="frame" x="0.0" y="50" width="375" height="617"/>
+                                <rect key="frame" x="0.0" y="60" width="375" height="607"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dat-27-C6G">
                                     <size key="itemSize" width="144" height="140"/>
@@ -118,12 +118,11 @@
                                 </connections>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WzH-Tl-dBb">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8CC-M4-kfZ">
-                                        <rect key="frame" x="8" y="12" width="39" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="voltar">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8CC-M4-kfZ">
+                                        <rect key="frame" x="8" y="16" width="23" height="36"/>
+                                        <state key="normal" image="backButton">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -134,8 +133,9 @@
                                 <color key="backgroundColor" name="green"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="8CC-M4-kfZ" secondAttribute="bottom" constant="8" id="Z5N-HA-iSv"/>
-                                    <constraint firstAttribute="height" constant="50" id="cKB-x6-Psb"/>
+                                    <constraint firstAttribute="height" constant="60" id="cKB-x6-Psb"/>
                                     <constraint firstItem="8CC-M4-kfZ" firstAttribute="leading" secondItem="WzH-Tl-dBb" secondAttribute="leading" constant="8" id="lSO-Rj-wEe"/>
+                                    <constraint firstItem="8CC-M4-kfZ" firstAttribute="height" secondItem="WzH-Tl-dBb" secondAttribute="height" multiplier="0.6" id="u3P-Qn-PFz"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -169,6 +169,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="23" height="45"/>
         <image name="redButton" width="165" height="165"/>
         <namedColor name="blue">
             <color red="0.11400000005960464" green="0.76899999380111694" blue="0.94099998474121094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
