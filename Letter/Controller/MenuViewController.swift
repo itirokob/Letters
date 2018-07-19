@@ -13,14 +13,11 @@ class MenuViewController: UIViewController {
     var objects: [ObjectModel] = []
     var selectedIndex: Int = 0
     var objectDictionary: [String: Bool] = [:]
-
-    @IBOutlet weak var closeView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.objectDictionary = UserDefaultsManager.instance.getObjectsDictionary()
         self.objects.append(contentsOf: ObjectReference.instance.objects)
-        closeView.layer.cornerRadius = closeView.frame.size.width / 2
     }
 
     // MARK: - Navigation
@@ -48,13 +45,13 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
             let state = objectDictionary[objects[row].id] ?? false
             if state {
                 cell.label.text = objects[row].name.capitalized
+                cell.label.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).withAlphaComponent(0.5)
                 cell.image.image = objects[row].image
             } else {
                 cell.label.text = ""
                 cell.image.image = objects[row].hiddenImage
             }
         }
-        
         return cell
     }
     

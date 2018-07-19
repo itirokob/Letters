@@ -18,6 +18,7 @@
 		9B25EE542100DD7800550423 /* india.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B25EE532100DD7800550423 /* india.xib */; };
 		9B25EE562100E03600550423 /* IndiaScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B25EE552100E03600550423 /* IndiaScreen.swift */; };
 		9B25EE592100F51300550423 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B25EE582100F51300550423 /* UserDefaultsManager.swift */; };
+		9B25EE5B2100FA5F00550423 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B25EE5A2100FA5F00550423 /* RoundView.swift */; };
 		CBDB4F7520FFC57600476C15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDB4F7420FFC57600476C15 /* AppDelegate.swift */; };
 		CBDB4F7720FFC57600476C15 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = CBDB4F7620FFC57600476C15 /* art.scnassets */; };
 		CBDB4F7920FFC57600476C15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDB4F7820FFC57600476C15 /* ViewController.swift */; };
@@ -45,6 +46,7 @@
 		9B25EE532100DD7800550423 /* india.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = india.xib; sourceTree = "<group>"; };
 		9B25EE552100E03600550423 /* IndiaScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndiaScreen.swift; sourceTree = "<group>"; };
 		9B25EE582100F51300550423 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		9B25EE5A2100FA5F00550423 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
 		CBDB4F7120FFC57600476C15 /* Letter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Letter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBDB4F7420FFC57600476C15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBDB4F7620FFC57600476C15 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				9B25EE492100D72C00550423 /* InitialScreens */,
+				9B25EE5A2100FA5F00550423 /* RoundView.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B25EE4D2100D7A400550423 /* InitialScreenReference.swift in Sources */,
+				9B25EE5B2100FA5F00550423 /* RoundView.swift in Sources */,
 				9B25EE562100E03600550423 /* IndiaScreen.swift in Sources */,
 				9B25EE4F2100D81100550423 /* InitialScreenViewController.swift in Sources */,
 				9B25EE412100CE9400550423 /* ObjectReference.swift in Sources */,
