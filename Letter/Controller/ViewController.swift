@@ -40,14 +40,6 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
         if let object = self.objectModel {
             self.presenter = GamePresenter(objectModel: object, delegate: self)
         }
-        
-        //Initiate the sight
-        sceneView.overlaySKScene = SKScene(fileNamed: "OverlayScene.sks")
-        self.sight = SKSpriteNode(imageNamed: "sight")
-        if let sight = self.sight{
-            sceneView.overlaySKScene?.addChild(sight)
-            sceneView.overlaySKScene?.isUserInteractionEnabled = false
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
