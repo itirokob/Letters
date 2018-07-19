@@ -10,12 +10,18 @@ import UIKit
 import SceneKit
 import ARKit
 
-class ViewController: UIViewController, ARSCNViewDelegate {
-
+class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate {
     @IBOutlet var sceneView: ARSCNView!
+    var objectModel:ObjectModel?
+    var presenter:GamePresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Create a new scene
+        let scene = SCNScene(named: "art.scnassets/empty.scn")!
+        
+        // Set the scene to the view
+        sceneView.scene = scene
         
         // Set the view's delegate
         sceneView.delegate = self
@@ -23,11 +29,15 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
         
-        // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+        //Check if we have a object model already
+        if self.objectModel == nil {
+            self.objectModel = ObjectModel(name: "spider")
+        }
         
-        // Set the scene to the view
-        sceneView.scene = scene
+        //Instantiate game presenter
+        if let object = self.objectModel {
+            self.presenter = GamePresenter(objectModel: object, delegate: self)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,15 +62,21 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
 
     // MARK: - ARSCNViewDelegate
-    
      func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
-         let translation = anchor.transform.translation
-         let x2 = translation.x
-         let y2 = translation.y
-         let z2 = translation.z
+        let translation = anchor.transform.translation
+        self.presenter?.foundPlane(position: SCNVector3(translation.x, translation.y, translation.z))
+    }
+    
+    // MARK: - GamePresenterDelegate
+    func instantiateNode(node: SCNNode) {
+        sceneView.scene.rootNode.addChildNode(node)
         
-         addShipToSceneView(with: SCNVector3(x2,y2,z2))
-     }
+        guard let scene = SCNScene(named: "spider.scn"),
+            let node2 = scene.rootNode.childNode(withName: "sphere", recursively: false)
+            else { return }
+        node2.position = node.position
+        sceneView.scene.rootNode.addChildNode(node2)
+    }
     
     func session(_ session: ARSession, didFailWithError error: Error) {
         // Present an error message to the user
