@@ -12,9 +12,11 @@ class MenuViewController: UIViewController {
     
     var objects: [ObjectModel] = []
     var selectedIndex: Int = 0
-
+    var objectDictionary: [String: Bool] = [:]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.objectDictionary = UserDefaultsManager.instance.getObjectsDictionary()
         self.objects.append(contentsOf: ObjectReference.instance.objects)
     }
 
@@ -37,12 +39,19 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "menuCell", for: indexPath)
+        let row = indexPath.row
         
         if let cell = cell as? MenuCollectionViewCell {
-            cell.label.text = objects[indexPath.row].name
-            cell.image.image = objects[indexPath.row].image
+            let state = objectDictionary[objects[row].id] ?? false
+            if state {
+                cell.label.text = objects[row].name.capitalized
+                cell.label.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).withAlphaComponent(0.5)
+                cell.image.image = objects[row].image
+            } else {
+                cell.label.text = ""
+                cell.image.image = objects[row].hiddenImage
+            }
         }
-        
         return cell
     }
     
