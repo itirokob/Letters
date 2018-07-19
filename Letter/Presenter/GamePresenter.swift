@@ -11,7 +11,7 @@ import ARKit
 
 protocol GamePresenterDelegate: class {
     func instantiateNode(node: SCNNode, lettersNode: SCNNode)
-    func updateCorrectLetters(letter:String)
+    func updateCorrectLetters(letter:String, index:Int)
     func wrongLetterPressed()
 }
 
@@ -19,12 +19,11 @@ class GamePresenter {
     var objectModel:ObjectModel
     weak var delegate:GamePresenterDelegate?
     var mainNode:SCNNode?
-    var wordArray:[Character]
+    var correctCounter:Int = 0
     
     init(objectModel:ObjectModel, delegate:GamePresenterDelegate) {
         self.objectModel = objectModel
         self.delegate = delegate
-        self.wordArray = Array(self.objectModel.name)
     }
     
     /// This func runs the logic of creating a node when a plane is detected, only once
@@ -54,13 +53,18 @@ class GamePresenter {
     ///
     /// - Parameter letter: letter pressed
     func letterPressed(letter:String){
-        if wordArray.count > 0{
-            if letter.first == wordArray.first {
-                delegate?.updateCorrectLetters(letter: letter)
-                self.wordArray.remove(at: 0)
+        let word = self.objectModel.name
+        if correctCounter < word.count {
+            if letter == word.character(at: correctCounter).uppercased() {
+                delegate?.updateCorrectLetters(letter: letter, index: correctCounter)
+                correctCounter = correctCounter + 1
             } else {
                 delegate?.wrongLetterPressed()
             }
         }
     }
+    
+    
 }
+
+

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CorrectLetter" customModule="Letter" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="168" height="125"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dtE-go-krv">
+                    <rect key="frame" x="21.5" y="0.0" width="125" height="125"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sd6-9S-gEm">
+                            <rect key="frame" x="48.5" y="34.5" width="29" height="46.5"/>
+                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="40"/>
+                            <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HNW-Ea-M1T">
+                            <rect key="frame" x="37.5" y="77" width="50" height="5"/>
+                            <color key="backgroundColor" name="green"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="WpZ-bK-OcB"/>
+                                <constraint firstAttribute="height" constant="5" id="Xsk-fJ-Tpt"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Sd6-9S-gEm" firstAttribute="centerX" secondItem="dtE-go-krv" secondAttribute="centerX" id="Eub-lx-fxS"/>
+                        <constraint firstAttribute="width" secondItem="dtE-go-krv" secondAttribute="height" multiplier="1:1" id="EvB-41-TYG"/>
+                        <constraint firstItem="HNW-Ea-M1T" firstAttribute="centerX" secondItem="Sd6-9S-gEm" secondAttribute="centerX" id="L3w-2v-rPJ"/>
+                        <constraint firstItem="Sd6-9S-gEm" firstAttribute="centerY" secondItem="dtE-go-krv" secondAttribute="centerY" constant="-5" id="MdR-QY-bSy"/>
+                        <constraint firstItem="HNW-Ea-M1T" firstAttribute="top" secondItem="Sd6-9S-gEm" secondAttribute="bottom" constant="-4" id="Nx2-In-WKA"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="dtE-go-krv" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="1ah-oI-GIM"/>
+                <constraint firstItem="dtE-go-krv" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="9lw-Oz-LRo"/>
+                <constraint firstItem="dtE-go-krv" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="clx-ly-NR6"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="letter" destination="Sd6-9S-gEm" id="fHT-Wk-NRl"/>
+            </connections>
+            <point key="canvasLocation" x="-70" y="-132.5"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="green">
+            <color red="0.25499999523162842" green="0.83899998664855957" blue="0.27099999785423279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

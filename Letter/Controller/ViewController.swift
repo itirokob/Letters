@@ -16,6 +16,10 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
     var objectModel:ObjectModel?
     var presenter:GamePresenter?
     var sight: SKSpriteNode?
+    var lettersNode:SCNNode?
+    var correctLettersArray:[CorrectLetter] = []
+
+    @IBOutlet weak var stackView: UIStackView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +44,9 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
         if let object = self.objectModel {
             self.presenter = GamePresenter(objectModel: object, delegate: self)
         }
+        
+        //Load underlines for correct letters
+        self.loadCorrectLetters()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -62,6 +69,35 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
         // Pause the view's session
         sceneView.session.pause()
     }
+    
+    func feedLetters(){
+        if let lettersNode = self.lettersNode, let object = self.objectModel{
+            var wordArray = Array(object.name.uppercased())
+
+            for node in lettersNode.childNodes{
+                if wordArray.isEmpty == false {
+                    if let nodeText = node.geometry as? SCNText {
+                        nodeText.string = String(wordArray.first!)
+                        wordArray.remove(at: 0)
+                    }
+                }
+            }
+        } else {
+            print("Error in feedLetters")
+        }
+    }
+    
+    func loadCorrectLetters(){
+        guard let object = self.objectModel else { return }
+        
+        for _ in 0..<object.name.count{
+            if let view = UINib(nibName: "CorrectLetter", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as? CorrectLetter {
+                view.letter.text = " "
+                self.stackView.addArrangedSubview(view)
+                self.correctLettersArray.append(view)
+            }
+        }
+    }
 
     // MARK: - ARSCNViewDelegate
      func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
@@ -73,9 +109,13 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
     func instantiateNode(node: SCNNode, lettersNode: SCNNode) {
         sceneView.scene.rootNode.addChildNode(node)
         sceneView.scene.rootNode.addChildNode(lettersNode)
+        self.lettersNode = lettersNode
+        
+        self.feedLetters()
     }
     
-    func updateCorrectLetters(letter: String) {
+    func updateCorrectLetters(letter: String, index:Int) {
+        self.correctLettersArray[index].letter.text = letter
         //Updates the correct letters
     }
 
@@ -87,13 +127,20 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
         if let touch = touches.first {
             let position = touch.location(in: sceneView)
             let hitList = sceneView.hitTest(position, options: nil)
- 
+            
             //The SCNText is the geometry parameter from node
-            if let node = hitList.first?.node {
-                if let text = node.geometry as? SCNText, let letter = text.string as? String {
+            if let node = hitList.first?.node.parent {
+                if let nodeText = node.geometry as? SCNText, let letter = nodeText.string as? String {
                     self.presenter?.letterPressed(letter: letter)
                 }
             }
+            
+//            if hitList.count > 1{
+//                let node = hitList[1].node
+//                if let nodeText = node.geometry as? SCNText, let letter = nodeText.string as? String {
+//                    self.presenter?.letterPressed(letter: letter)
+//                }
+//            }
         }
     }
     
