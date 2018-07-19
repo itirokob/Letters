@@ -10,13 +10,16 @@ import UIKit
 
 class InitialScreenViewController: UIViewController {
 
+    @IBOutlet weak var button: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        if let view = UINib(nibName: "savana", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as? UIView {
+        // Load random screen
+        let screen: InitialScreen = InitialScreenReference.getRandomScreen()
+        if let view = UINib(nibName: screen.nibName, bundle: nil).instantiate(withOwner: nil, options: nil)[0] as? UIView {
             self.view.addSubview(view)
             self.view.sendSubview(toBack: view)
         }
+        self.button.setImage(UIImage(named: screen.buttonName), for: .normal)
     }
 }

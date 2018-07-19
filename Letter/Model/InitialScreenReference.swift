@@ -10,14 +10,13 @@ import UIKit
 
 class InitialScreenReference {
     
-    static let instace = InitialScreenReference()
     static var screens: [InitialScreen] = [
-        InitialScreen(name: "savana", button: "redButton")
+        InitialScreen(name: "savana", button: "redButton"),
+        InitialScreen(name: "india", button: "greenButton"),
+        InitialScreen(name: "forrest", button: "orangeButton")
     ]
     
-    private init() {}
-    
-    static func getRandomScreen() -> InitialScreen {
+    class func getRandomScreen() -> InitialScreen {
         return self.screens[Int(arc4random_uniform(UInt32(self.screens.count)))]
     }
     
