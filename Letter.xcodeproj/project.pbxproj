@@ -16,6 +16,7 @@
 		9B25EE4F2100D81100550423 /* InitialScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B25EE4E2100D81100550423 /* InitialScreenViewController.swift */; };
 		9B25EE522100DC3400550423 /* forrest.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B25EE512100DC3400550423 /* forrest.xib */; };
 		9B25EE542100DD7800550423 /* india.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B25EE532100DD7800550423 /* india.xib */; };
+		9B25EE562100E03600550423 /* IndiaScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B25EE552100E03600550423 /* IndiaScreen.swift */; };
 		CBDB4F7520FFC57600476C15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDB4F7420FFC57600476C15 /* AppDelegate.swift */; };
 		CBDB4F7720FFC57600476C15 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = CBDB4F7620FFC57600476C15 /* art.scnassets */; };
 		CBDB4F7920FFC57600476C15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDB4F7820FFC57600476C15 /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 		9B25EE4E2100D81100550423 /* InitialScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialScreenViewController.swift; sourceTree = "<group>"; };
 		9B25EE512100DC3400550423 /* forrest.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = forrest.xib; sourceTree = "<group>"; };
 		9B25EE532100DD7800550423 /* india.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = india.xib; sourceTree = "<group>"; };
+		9B25EE552100E03600550423 /* IndiaScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndiaScreen.swift; sourceTree = "<group>"; };
 		CBDB4F7120FFC57600476C15 /* Letter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Letter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBDB4F7420FFC57600476C15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBDB4F7620FFC57600476C15 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -73,7 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				9B25EE492100D72C00550423 /* InitialScreens */,
-				9B25EE452100D06900550423 /* MenuCollectionViewCell.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -84,8 +85,17 @@
 				9B25EE4A2100D74300550423 /* savana.xib */,
 				9B25EE512100DC3400550423 /* forrest.xib */,
 				9B25EE532100DD7800550423 /* india.xib */,
+				9B25EE552100E03600550423 /* IndiaScreen.swift */,
 			);
 			path = InitialScreens;
+			sourceTree = "<group>";
+		};
+		9B25EE572100E15200550423 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				9B25EE452100D06900550423 /* MenuCollectionViewCell.swift */,
+			);
+			path = CustomCells;
 			sourceTree = "<group>";
 		};
 		CBDB4F6820FFC57600476C15 = {
@@ -133,9 +143,10 @@
 		CBDB4F8920FFC58D00476C15 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9B25EE442100D01A00550423 /* CustomView */,
 				CBDB4F7A20FFC57600476C15 /* Main.storyboard */,
 				9B25EE422100CF8B00550423 /* Menu.storyboard */,
+				9B25EE572100E15200550423 /* CustomCells */,
+				9B25EE442100D01A00550423 /* CustomView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -262,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B25EE4D2100D7A400550423 /* InitialScreenReference.swift in Sources */,
+				9B25EE562100E03600550423 /* IndiaScreen.swift in Sources */,
 				9B25EE4F2100D81100550423 /* InitialScreenViewController.swift in Sources */,
 				9B25EE412100CE9400550423 /* ObjectReference.swift in Sources */,
 				CBDB4F8F2100B37800476C15 /* ObjectModel.swift in Sources */,
