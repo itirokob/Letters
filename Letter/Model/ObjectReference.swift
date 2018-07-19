@@ -18,7 +18,7 @@ class ObjectReference: NSObject {
     
     // All the game Objects
     let objects: [ObjectModel] = [
-        ObjectModel(name: "spider", image: #imageLiteral(resourceName: "Elephant"), hiddenImage: #imageLiteral(resourceName: "hiddenElephant"))
+        ObjectModel(id: "1", name: "spider", image: #imageLiteral(resourceName: "Elephant"), hiddenImage: #imageLiteral(resourceName: "hiddenElephant"))
     ]
     
     private override init() {

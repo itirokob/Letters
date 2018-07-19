@@ -9,6 +9,7 @@
 import UIKit
 
 class ObjectModel {
+    var id: String
     var name: String
     var hiddenImage: UIImage
     var image: UIImage
@@ -19,7 +20,8 @@ class ObjectModel {
         return name
     }
     
-    init(name: String, image: UIImage, hiddenImage: UIImage) {
+    init(id: String, name: String, image: UIImage, hiddenImage: UIImage) {
+        self.id = id
         self.name = name
         self.image = image
         self.hiddenImage = hiddenImage

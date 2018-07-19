@@ -16,7 +16,7 @@ class IndiaScreen: UIView {
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
         
-        UIView.animate(withDuration: 50) {
+        UIView.animate(withDuration: 60) {
             let position01 = self.cloud01.layer.position
             self.cloud01.layer.position = CGPoint(x: -100, y: position01.y)
             let position02 = self.cloud02.layer.position

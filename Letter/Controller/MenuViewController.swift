@@ -12,10 +12,15 @@ class MenuViewController: UIViewController {
     
     var objects: [ObjectModel] = []
     var selectedIndex: Int = 0
+    var objectDictionary: [String: Bool] = [:]
 
+    @IBOutlet weak var closeView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.objectDictionary = UserDefaultsManager.instance.getObjectsDictionary()
         self.objects.append(contentsOf: ObjectReference.instance.objects)
+        closeView.layer.cornerRadius = closeView.frame.size.width / 2
     }
 
     // MARK: - Navigation
@@ -37,10 +42,17 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "menuCell", for: indexPath)
+        let row = indexPath.row
         
         if let cell = cell as? MenuCollectionViewCell {
-            cell.label.text = objects[indexPath.row].name
-            cell.image.image = objects[indexPath.row].image
+            let state = objectDictionary[objects[row].id] ?? false
+            if state {
+                cell.label.text = objects[row].name.capitalized
+                cell.image.image = objects[row].image
+            } else {
+                cell.label.text = ""
+                cell.image.image = objects[row].hiddenImage
+            }
         }
         
         return cell
