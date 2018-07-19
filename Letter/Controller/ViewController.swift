@@ -33,7 +33,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
         
         //Check if we have a object model already
         if self.objectModel == nil {
-            self.objectModel = ObjectModel(name: "spider")
+            self.objectModel = ObjectReference.instance.objects[0]
         }
         
         //Instantiate game presenter
