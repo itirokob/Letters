@@ -46,6 +46,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
         self.sight = SKSpriteNode(imageNamed: "sight")
         if let sight = self.sight{
             sceneView.overlaySKScene?.addChild(sight)
+            sceneView.overlaySKScene?.isUserInteractionEnabled = false
         }
     }
     
@@ -77,34 +78,31 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
     }
     
     // MARK: - GamePresenterDelegate
-    func instantiateNode(node: SCNNode) {
+    func instantiateNode(node: SCNNode, lettersNode: SCNNode) {
         sceneView.scene.rootNode.addChildNode(node)
-        
-        guard let scene = SCNScene(named: "spider.scn"),
-            let node2 = scene.rootNode.childNode(withName: "sphere", recursively: false)
-            else { return }
-        node2.position = node.position
-        sceneView.scene.rootNode.addChildNode(node2)
+        sceneView.scene.rootNode.addChildNode(lettersNode)
     }
     
+    func updateCorrectLetters(letter: String) {
+        //Updates the correct letters
+    }
+
+    func wrongLetterPressed() {
+        //Sends a feedback for the user
+    }
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let position = self.sight?.position {
+        if let touch = touches.first {
+            let position = touch.location(in: sceneView)
             let hitList = sceneView.hitTest(position, options: nil)
-            
-            if let hitObject = hitList.first{
-                let node = hitObject.node
-                
-                if node is SCNText {
-                    let textNode = node as! SCNText
-                    //Call presenter to check if letter pressed is the right one
+ 
+            //The SCNText is the geometry parameter from node
+            if let node = hitList.first?.node {
+                if let text = node.geometry as? SCNText, let letter = text.string as? String {
+                    self.presenter?.letterPressed(letter: letter)
                 }
             }
-
         }
-        
-        
-        
-
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {

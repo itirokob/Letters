@@ -10,17 +10,21 @@ import Foundation
 import ARKit
 
 protocol GamePresenterDelegate: class {
-    func instantiateNode(node: SCNNode)
+    func instantiateNode(node: SCNNode, lettersNode: SCNNode)
+    func updateCorrectLetters(letter:String)
+    func wrongLetterPressed()
 }
 
 class GamePresenter {
     var objectModel:ObjectModel
     weak var delegate:GamePresenterDelegate?
     var mainNode:SCNNode?
+    var wordArray:[Character]
     
     init(objectModel:ObjectModel, delegate:GamePresenterDelegate) {
         self.objectModel = objectModel
         self.delegate = delegate
+        self.wordArray = Array(self.objectModel.name)
     }
     
     /// This func runs the logic of creating a node when a plane is detected, only once
@@ -37,6 +41,26 @@ class GamePresenter {
         node.position = position
         self.mainNode = node
         
-        self.delegate?.instantiateNode(node: node)
+        guard let lettersScene = SCNScene(named: "spider.scn"),
+            let lettersNode = lettersScene.rootNode.childNode(withName: "sphere", recursively: false)
+            else { return }
+        lettersNode.position = position
+        
+        self.delegate?.instantiateNode(node: node, lettersNode: lettersNode)
+    }
+    
+    
+    /// This func will be called when the user press a letter, we'll check if it's correct here
+    ///
+    /// - Parameter letter: letter pressed
+    func letterPressed(letter:String){
+        if wordArray.count > 0{
+            if letter.first == wordArray.first {
+                delegate?.updateCorrectLetters(letter: letter)
+                self.wordArray.remove(at: 0)
+            } else {
+                delegate?.wrongLetterPressed()
+            }
+        }
     }
 }
