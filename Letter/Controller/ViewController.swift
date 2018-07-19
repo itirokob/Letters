@@ -9,12 +9,14 @@
 import UIKit
 import SceneKit
 import ARKit
+import SpriteKit
 
 class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate {
     @IBOutlet var sceneView: ARSCNView!
     var objectModel:ObjectModel?
     var presenter:GamePresenter?
-    
+    var sight: SKSpriteNode?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Create a new scene
@@ -37,6 +39,13 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
         //Instantiate game presenter
         if let object = self.objectModel {
             self.presenter = GamePresenter(objectModel: object, delegate: self)
+        }
+        
+        //Initiate the sight
+        sceneView.overlaySKScene = SKScene(fileNamed: "OverlayScene.sks")
+        self.sight = SKSpriteNode(imageNamed: "sight")
+        if let sight = self.sight{
+            sceneView.overlaySKScene?.addChild(sight)
         }
     }
     
@@ -76,6 +85,26 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
             else { return }
         node2.position = node.position
         sceneView.scene.rootNode.addChildNode(node2)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let position = self.sight?.position {
+            let hitList = sceneView.hitTest(position, options: nil)
+            
+            if let hitObject = hitList.first{
+                let node = hitObject.node
+                
+                if node is SCNText {
+                    let textNode = node as! SCNText
+                    //Call presenter to check if letter pressed is the right one
+                }
+            }
+
+        }
+        
+        
+        
+
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {

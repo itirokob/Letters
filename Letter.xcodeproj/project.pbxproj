@@ -19,6 +19,7 @@
 		9B25EE562100E03600550423 /* IndiaScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B25EE552100E03600550423 /* IndiaScreen.swift */; };
 		9B25EE592100F51300550423 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B25EE582100F51300550423 /* UserDefaultsManager.swift */; };
 		9B25EE5B2100FA5F00550423 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B25EE5A2100FA5F00550423 /* RoundView.swift */; };
+		CB710D8E2100DE4700D41D53 /* OverlayScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = CB710D8D2100DE4700D41D53 /* OverlayScene.sks */; };
 		CBDB4F7520FFC57600476C15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDB4F7420FFC57600476C15 /* AppDelegate.swift */; };
 		CBDB4F7720FFC57600476C15 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = CBDB4F7620FFC57600476C15 /* art.scnassets */; };
 		CBDB4F7920FFC57600476C15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDB4F7820FFC57600476C15 /* ViewController.swift */; };
@@ -47,6 +48,7 @@
 		9B25EE552100E03600550423 /* IndiaScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndiaScreen.swift; sourceTree = "<group>"; };
 		9B25EE582100F51300550423 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		9B25EE5A2100FA5F00550423 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
+		CB710D8D2100DE4700D41D53 /* OverlayScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = OverlayScene.sks; sourceTree = "<group>"; };
 		CBDB4F7120FFC57600476C15 /* Letter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Letter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBDB4F7420FFC57600476C15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBDB4F7620FFC57600476C15 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				CBDB4F942100BCD500476C15 /* spider.scn */,
 				CBDB4F962100BCD500476C15 /* Spinnen_Bein_tex_2.jp.jpg */,
 				CBDB4F972100BCD500476C15 /* Spinnen_Bein_tex_COLO.jpg */,
+				CB710D8D2100DE4700D41D53 /* OverlayScene.sks */,
 			);
 			name = spider;
 			path = "New Group";
@@ -258,6 +261,7 @@
 				CBDB4F9A2100BCD500476C15 /* SH3.png in Resources */,
 				CBDB4F9B2100BCD500476C15 /* Spinnen_Bein_tex_2.jp.jpg in Resources */,
 				CBDB4F992100BCD500476C15 /* spider.scn in Resources */,
+				CB710D8E2100DE4700D41D53 /* OverlayScene.sks in Resources */,
 				CBDB4F7720FFC57600476C15 /* art.scnassets in Resources */,
 				9B25EE542100DD7800550423 /* india.xib in Resources */,
 				CBDB4F8120FFC57800476C15 /* LaunchScreen.storyboard in Resources */,
