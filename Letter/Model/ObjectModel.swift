@@ -6,18 +6,22 @@
 //  Copyright © 2018 Bianca Itiroko. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class ObjectModel {
-    var name:String
-    var sceneName:String {
+    var name: String
+    var hiddenImage: UIImage
+    var image: UIImage
+    var sceneName: String {
         return name + ".scn"
     }
-    var nodeName:String{
+    var nodeName: String {
         return name
     }
     
-    init(name:String) {
+    init(name: String, image: UIImage, hiddenImage: UIImage) {
         self.name = name
+        self.image = image
+        self.hiddenImage = hiddenImage
     }
 }
