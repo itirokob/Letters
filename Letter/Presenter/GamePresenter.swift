@@ -18,6 +18,9 @@ protocol GamePresenterDelegate: class {
     
     /// When a wrong letter is pressed, we'll send a feedback to the user
     func wrongLetterPressed()
+    
+    /// When the player got all the letters correct
+    func endGame()
 }
 
 class GamePresenter {
@@ -63,6 +66,9 @@ class GamePresenter {
             if letter == word.character(at: correctCounter).uppercased() {
                 delegate?.updateCorrectLetters(letter: letter, index: correctCounter, nodePressed: nodePressed)
                 correctCounter = correctCounter + 1
+                if correctCounter == word.count {
+                    delegate?.endGame()
+                }
             } else {
                 delegate?.wrongLetterPressed()
             }

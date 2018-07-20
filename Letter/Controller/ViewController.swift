@@ -77,9 +77,9 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
         sceneView.session.pause()
     }
     
+    /// Go Back to the Menu
     @IBAction func backButton(_ sender: UIButton) {
-//        self.dismiss(animated: true, completion: nil)
-        self.performSegue(withIdentifier: "endGameSegue", sender: self)
+        self.dismiss(animated: true, completion: nil)
     }
     
     /// Navigation
@@ -206,6 +206,11 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
                 self.presenter?.letterPressed(letter: letter, nodePressed: node)
             }
         }
+    }
+    
+    /// Finish the Game
+    func endGame() {
+        self.performSegue(withIdentifier: "endGameSegue", sender: self)
     }
     
     /// This func recognizes user's touches, when it happens we'll check if the pressed letter is correct
