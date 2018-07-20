@@ -20,7 +20,8 @@ class ObjectReference: NSObject {
     let objects: [ObjectModel] = [
         ObjectModel(id: "1", name: "aranha", filename:"spider", image: #imageLiteral(resourceName: "Elephant"), hiddenImage: #imageLiteral(resourceName: "hiddenElephant")),
         ObjectModel(id: "2", name: "alce", filename: "deer", image: #imageLiteral(resourceName: "deer"), hiddenImage: #imageLiteral(resourceName: "hiddenDeer")),
-        ObjectModel(id: "3", name: "robô", filename: "robot", image: #imageLiteral(resourceName: "robot"), hiddenImage: #imageLiteral(resourceName: "hiddenRobot"))
+        ObjectModel(id: "3", name: "robô", filename: "robot", image: #imageLiteral(resourceName: "robot"), hiddenImage: #imageLiteral(resourceName: "hiddenRobot")),
+        ObjectModel(id: "4", name: "cachorro", filename: "dog", image: #imageLiteral(resourceName: "dog"), hiddenImage: #imageLiteral(resourceName: "hiddenDog"))
     ]
     
     private override init() {
