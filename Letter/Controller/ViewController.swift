@@ -11,6 +11,12 @@ import SceneKit
 import ARKit
 import SpriteKit
 
+// Action to self-destruct nodes after 0.5s
+let selfDestructAction: SCNAction = SCNAction.sequence([SCNAction.wait(duration: 0.5), SCNAction.run({ (node) in
+    node.removeFromParentNode()
+})])
+let letterRepositionVector: SCNVector3 = SCNVector3(0.2, 0.5, 0)
+
 class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate {
     @IBOutlet var sceneView: ARSCNView!
     var objectModel:ObjectModel?
@@ -139,7 +145,8 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
         self.feedLetters()
     }
 
-    /// When user hits the correct letter, we'll update the display of letters in the screen
+    /// When user hits the correct letter,
+    /// we'll update the display of letters in the screen
     ///
     /// - Parameters:
     ///   - letter: letter pressed correctly
@@ -148,12 +155,25 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
     func updateCorrectLetters(letter: String, index:Int, nodePressed: SCNNode) {
         self.correctLettersArray[index].letter.text = letter
         nodePressed.removeFromParentNode()
+        addConfetti(at: nodePressed.position)
     }
 
     /// When a wrong letter is pressed, we'll send a feedback to the user
     func wrongLetterPressed() {
     }
     
+    /// Run a SCNParticle animation on the given position
+    ///
+    /// - Parameter position: the position to run the animation
+    func addConfetti(at position: SCNVector3) {
+        let reposition = position + letterRepositionVector
+        guard let confettiParticles = SCNParticleSystem(named: "Confetti.scnp", inDirectory: nil) else { return }
+        let node = SCNNode()
+        node.addParticleSystem(confettiParticles)
+        node.position = reposition
+        sceneView.scene.rootNode.addChildNode(node)
+        node.runAction(selfDestructAction)
+    }
     
     /// This func gets the letter from node pressed and check if it's correct
     ///

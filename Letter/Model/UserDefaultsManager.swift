@@ -27,7 +27,6 @@ class UserDefaultsManager {
         return (defaults.dictionary(forKey: Keys.objDict.rawValue) as? [String: Bool]) ?? [:]
     }
     
-    
     /// Updates the stored dictionary of objects wirh a new
     /// key:value object
     /// if the key already exists, replace the value with the new one
