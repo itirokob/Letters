@@ -98,11 +98,19 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
             }
         }
     }
+    
+    func stopPlaneDetection(){
+        let configuration = ARWorldTrackingConfiguration()
+        configuration.planeDetection = .init(rawValue: 0)
+        self.sceneView.session.run(configuration)
+        self.sceneView.debugOptions = []
+    }
 
     // MARK: - ARSCNViewDelegate
      func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         let translation = anchor.transform.translation
         self.presenter?.foundPlane(position: SCNVector3(translation.x, translation.y, translation.z))
+        self.stopPlaneDetection()
     }
     
     // MARK: - GamePresenterDelegate
