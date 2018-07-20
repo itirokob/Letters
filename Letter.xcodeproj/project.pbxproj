@@ -20,6 +20,7 @@
 		9B25EE592100F51300550423 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B25EE582100F51300550423 /* UserDefaultsManager.swift */; };
 		9B25EE5B2100FA5F00550423 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B25EE5A2100FA5F00550423 /* RoundView.swift */; };
 		9B25EE602102090100550423 /* robot.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B25EE5F2102090100550423 /* robot.png */; };
+		9B52D75F210282F20020C37D /* elephant.scn in Resources */ = {isa = PBXBuildFile; fileRef = 9BC8680B2102818E00A3F4AB /* elephant.scn */; };
 		9B785D1B21021BCC004E4CE4 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B785D1921021BCC004E4CE4 /* spark.png */; };
 		9B785D1C21021BCC004E4CE4 /* Confetti.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 9B785D1A21021BCC004E4CE4 /* Confetti.scnp */; };
 		9B785D202102237A004E4CE4 /* SumOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B785D1F2102237A004E4CE4 /* SumOperator.swift */; };
@@ -77,6 +78,7 @@
 		9BC867FF2102766500A3F4AB /* dog.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = dog.scn; sourceTree = "<group>"; };
 		9BC8680221027CAE00A3F4AB /* bear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bear.png; sourceTree = "<group>"; };
 		9BC8680621027CDF00A3F4AB /* bear.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = bear.scn; sourceTree = "<group>"; };
+		9BC8680B2102818E00A3F4AB /* elephant.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = elephant.scn; sourceTree = "<group>"; };
 		CB2F9B3F21020BA90029889A /* Float4x4Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Float4x4Extension.swift; sourceTree = "<group>"; };
 		CB710D9121010DA300D41D53 /* CorrectLetter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CorrectLetter.xib; sourceTree = "<group>"; };
 		CB710D9321010EB700D41D53 /* CorrectLetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectLetter.swift; sourceTree = "<group>"; };
@@ -184,6 +186,14 @@
 			path = Bear;
 			sourceTree = "<group>";
 		};
+		9BC868082102814400A3F4AB /* Elephant */ = {
+			isa = PBXGroup;
+			children = (
+				9BC8680B2102818E00A3F4AB /* elephant.scn */,
+			);
+			path = Elephant;
+			sourceTree = "<group>";
+		};
 		CB710D952101166E00D41D53 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +283,7 @@
 		CBDB4F922100BB1100476C15 /* 3D Models */ = {
 			isa = PBXGroup;
 			children = (
+				9BC868082102814400A3F4AB /* Elephant */,
 				9BC8680121027CA400A3F4AB /* Bear */,
 				9BC867FA2102763300A3F4AB /* Dog */,
 				9BC867F321026F7000A3F4AB /* Deer */,
@@ -375,6 +386,7 @@
 				CBDB4F9D2100BCD500476C15 /* haar_detail_NRM.jpg in Resources */,
 				CBDB4F9C2100BCD500476C15 /* Spinnen_Bein_tex_COLO.jpg in Resources */,
 				CBDB4F7E20FFC57800476C15 /* Assets.xcassets in Resources */,
+				9B52D75F210282F20020C37D /* elephant.scn in Resources */,
 				9B25EE522100DC3400550423 /* forrest.xib in Resources */,
 				CBDB4F7C20FFC57600476C15 /* Main.storyboard in Resources */,
 				9BC867FC2102764500A3F4AB /* dog.png in Resources */,
