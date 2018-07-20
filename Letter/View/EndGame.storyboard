@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -21,13 +20,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dmd-ZP-fON">
-                                <rect key="frame" x="-0.5" y="-6.5" width="375" height="700"/>
+                                <rect key="frame" x="0.0" y="-6.5" width="375" height="700"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3sz-QG-ata">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V4v-5h-AAI">
-                                            <rect key="frame" x="57" y="175" width="262.5" height="350"/>
+                                            <rect key="frame" x="56.5" y="175" width="262.5" height="350"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRq-gQ-W6v">
                                                     <rect key="frame" x="5" y="20" width="252.5" height="35"/>
@@ -35,11 +34,11 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BzK-P2-uPO">
-                                                    <rect key="frame" x="39.5" y="87.5" width="183.5" height="175"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BzK-P2-uPO">
+                                                    <rect key="frame" x="39" y="87.5" width="183.5" height="175"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ily-eh-hDg">
-                                                    <rect key="frame" x="106.5" y="282.5" width="50" height="39"/>
+                                                    <rect key="frame" x="106" y="282.5" width="50" height="39"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="8Sj-e1-3EH"/>
                                                         <constraint firstAttribute="width" secondItem="ily-eh-hDg" secondAttribute="height" multiplier="9:7" id="XQi-f7-DNR"/>
