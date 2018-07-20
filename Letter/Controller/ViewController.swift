@@ -26,20 +26,19 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
     var correctLettersArray:[CorrectLetter] = []
 
     @IBOutlet weak var stackView: UIStackView!
-
+    @IBOutlet weak var fxView: UIVisualEffectView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Create a new scene
         let scene = SCNScene(named: "art.scnassets/empty.scn")!
         
-        // Set the scene to the view
+        // Set the scene to the view and the delegate
         sceneView.scene = scene
-        
-        // Set the view's delegate
         sceneView.delegate = self
         
-        // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
+        // DEBUG: Show statistics such as fps and timing information
+//        sceneView.showsStatistics = true
         
         //Check if we have a object model already
         if self.objectModel == nil {
@@ -53,6 +52,9 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
         
         //Load underlines for correct letters
         self.loadCorrectLetters()
+        
+        self.stackView.isHidden = true
+        self.fxView.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -71,9 +73,12 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
         // Pause the view's session
         sceneView.session.pause()
+    }
+    
+    @IBAction func backButton(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     /// Iterate through the nodes and set the text in each one
@@ -94,6 +99,10 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
     
     /// Set the letter nodes text
     func feedLetters(){
+        DispatchQueue.main.async {
+            self.stackView.isHidden = false
+            self.fxView.isHidden = false
+        }
         if let lettersNode = self.lettersNode, let object = self.objectModel{
             var wordArray = Array(object.name.uppercased())
             self.setNodesText(lettersNode, &wordArray)
