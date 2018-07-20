@@ -10,8 +10,13 @@ import Foundation
 import ARKit
 
 protocol GamePresenterDelegate: class {
+    /// If a plane is detected, we'll instantiate the object and the letters
     func instantiateNode(node: SCNNode, lettersNode: SCNNode)
+    
+    /// When user hits the correct letter, we'll update the display of letters in the screen
     func updateCorrectLetters(letter:String, index:Int, nodePressed: SCNNode)
+    
+    /// When a wrong letter is pressed, we'll send a feedback to the user
     func wrongLetterPressed()
 }
 
