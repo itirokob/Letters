@@ -21,6 +21,7 @@
 		9B25EE5B2100FA5F00550423 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B25EE5A2100FA5F00550423 /* RoundView.swift */; };
 		9B25EE602102090100550423 /* robot.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B25EE5F2102090100550423 /* robot.png */; };
 		CB2F9B4021020BA90029889A /* Float4x4Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2F9B3F21020BA90029889A /* Float4x4Extension.swift */; };
+		CB2F9B41210212030029889A /* robot.scn in Resources */ = {isa = PBXBuildFile; fileRef = 9B25EE612102099200550423 /* robot.scn */; };
 		CB710D9221010DA300D41D53 /* CorrectLetter.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB710D9121010DA300D41D53 /* CorrectLetter.xib */; };
 		CB710D9421010EB700D41D53 /* CorrectLetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB710D9321010EB700D41D53 /* CorrectLetter.swift */; };
 		CB710D972101168C00D41D53 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB710D962101168C00D41D53 /* StringExtension.swift */; };
@@ -289,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBDB4F9A2100BCD500476C15 /* SH3.png in Resources */,
+				CB2F9B41210212030029889A /* robot.scn in Resources */,
 				9B25EE602102090100550423 /* robot.png in Resources */,
 				CBDB4F9B2100BCD500476C15 /* Spinnen_Bein_tex_2.jp.jpg in Resources */,
 				CBDB4F992100BCD500476C15 /* spider.scn in Resources */,
@@ -472,7 +474,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2ECVV26Q6C;
+				DEVELOPMENT_TEAM = GJ5VL7QF9C;
 				INFOPLIST_FILE = Letter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -490,7 +492,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2ECVV26Q6C;
+				DEVELOPMENT_TEAM = GJ5VL7QF9C;
 				INFOPLIST_FILE = Letter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
