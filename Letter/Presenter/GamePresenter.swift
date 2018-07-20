@@ -11,7 +11,7 @@ import ARKit
 
 protocol GamePresenterDelegate: class {
     func instantiateNode(node: SCNNode, lettersNode: SCNNode)
-    func updateCorrectLetters(letter:String, index:Int)
+    func updateCorrectLetters(letter:String, index:Int, nodePressed: SCNNode)
     func wrongLetterPressed()
 }
 
@@ -52,11 +52,11 @@ class GamePresenter {
     /// This func will be called when the user press a letter, we'll check if it's correct here
     ///
     /// - Parameter letter: letter pressed
-    func letterPressed(letter:String){
+    func letterPressed(letter:String, nodePressed:SCNNode){
         let word = self.objectModel.name
         if correctCounter < word.count {
             if letter == word.character(at: correctCounter).uppercased() {
-                delegate?.updateCorrectLetters(letter: letter, index: correctCounter)
+                delegate?.updateCorrectLetters(letter: letter, index: correctCounter, nodePressed: nodePressed)
                 correctCounter = correctCounter + 1
             } else {
                 delegate?.wrongLetterPressed()

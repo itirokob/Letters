@@ -114,9 +114,9 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
         self.feedLetters()
     }
     
-    func updateCorrectLetters(letter: String, index:Int) {
+    func updateCorrectLetters(letter: String, index:Int, nodePressed: SCNNode) {
         self.correctLettersArray[index].letter.text = letter
-        //Updates the correct letters
+        nodePressed.removeFromParentNode()
     }
 
     func wrongLetterPressed() {
@@ -131,16 +131,9 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
             //The SCNText is the geometry parameter from node
             if let node = hitList.first?.node.parent {
                 if let nodeText = node.geometry as? SCNText, let letter = nodeText.string as? String {
-                    self.presenter?.letterPressed(letter: letter)
+                    self.presenter?.letterPressed(letter: letter, nodePressed: node)
                 }
             }
-            
-//            if hitList.count > 1{
-//                let node = hitList[1].node
-//                if let nodeText = node.geometry as? SCNText, let letter = nodeText.string as? String {
-//                    self.presenter?.letterPressed(letter: letter)
-//                }
-//            }
         }
     }
     
