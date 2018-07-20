@@ -15,7 +15,7 @@ import SpriteKit
 let selfDestructAction: SCNAction = SCNAction.sequence([SCNAction.wait(duration: 0.5), SCNAction.run({ (node) in
     node.removeFromParentNode()
 })])
-let letterRepositionVector: SCNVector3 = SCNVector3(0.2, 0.5, 0)
+let letterRepositionVector: SCNVector3 = SCNVector3(0.2, 0.5, -0.1)
 
 class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate {
     @IBOutlet var sceneView: ARSCNView!
