@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -161,6 +160,7 @@
                         <viewLayoutGuide key="safeArea" id="BVv-lP-BES"/>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="pdJ-tf-Wej" id="0aq-Gx-ygK"/>
                         <segue destination="Ug1-GC-RAx" kind="show" identifier="goToGameSegue" id="ikW-0b-tHp"/>
                     </connections>
                 </viewController>

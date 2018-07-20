@@ -23,6 +23,8 @@
 		9B52D75F210282F20020C37D /* elephant.scn in Resources */ = {isa = PBXBuildFile; fileRef = 9BC8680B2102818E00A3F4AB /* elephant.scn */; };
 		9B52D762210288520020C37D /* giraffe.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B52D761210288520020C37D /* giraffe.png */; };
 		9B52D766210288810020C37D /* giraffe.scn in Resources */ = {isa = PBXBuildFile; fileRef = 9B52D7652102887C0020C37D /* giraffe.scn */; };
+		9B52D769210291EC0020C37D /* fish.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B52D768210291EC0020C37D /* fish.png */; };
+		9B52D76D210292230020C37D /* fish.scn in Resources */ = {isa = PBXBuildFile; fileRef = 9B52D76C210292200020C37D /* fish.scn */; };
 		9B785D1B21021BCC004E4CE4 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B785D1921021BCC004E4CE4 /* spark.png */; };
 		9B785D1C21021BCC004E4CE4 /* Confetti.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 9B785D1A21021BCC004E4CE4 /* Confetti.scnp */; };
 		9B785D202102237A004E4CE4 /* SumOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B785D1F2102237A004E4CE4 /* SumOperator.swift */; };
@@ -71,6 +73,8 @@
 		9B25EE612102099200550423 /* robot.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = robot.scn; sourceTree = "<group>"; };
 		9B52D761210288520020C37D /* giraffe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = giraffe.png; sourceTree = "<group>"; };
 		9B52D7652102887C0020C37D /* giraffe.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = giraffe.scn; sourceTree = "<group>"; };
+		9B52D768210291EC0020C37D /* fish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish.png; sourceTree = "<group>"; };
+		9B52D76C210292200020C37D /* fish.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = fish.scn; sourceTree = "<group>"; };
 		9B785D1921021BCC004E4CE4 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		9B785D1A21021BCC004E4CE4 /* Confetti.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = Confetti.scnp; sourceTree = "<group>"; };
 		9B785D1F2102237A004E4CE4 /* SumOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumOperator.swift; sourceTree = "<group>"; };
@@ -161,6 +165,15 @@
 				9B52D761210288520020C37D /* giraffe.png */,
 			);
 			path = Giraffe;
+			sourceTree = "<group>";
+		};
+		9B52D767210291B70020C37D /* Fish */ = {
+			isa = PBXGroup;
+			children = (
+				9B52D76C210292200020C37D /* fish.scn */,
+				9B52D768210291EC0020C37D /* fish.png */,
+			);
+			path = Fish;
 			sourceTree = "<group>";
 		};
 		9B785D0E21021832004E4CE4 /* Sparkles */ = {
@@ -296,6 +309,7 @@
 		CBDB4F922100BB1100476C15 /* 3D Models */ = {
 			isa = PBXGroup;
 			children = (
+				9B52D767210291B70020C37D /* Fish */,
 				9B52D7602102883A0020C37D /* Giraffe */,
 				9BC868082102814400A3F4AB /* Elephant */,
 				9BC8680121027CA400A3F4AB /* Bear */,
@@ -392,12 +406,14 @@
 				9BC868002102766A00A3F4AB /* dog.scn in Resources */,
 				CBDB4F7720FFC57600476C15 /* art.scnassets in Resources */,
 				CB710D9221010DA300D41D53 /* CorrectLetter.xib in Resources */,
+				9B52D769210291EC0020C37D /* fish.png in Resources */,
 				9B52D766210288810020C37D /* giraffe.scn in Resources */,
 				9B25EE542100DD7800550423 /* india.xib in Resources */,
 				9BC867F9210270FC00A3F4AB /* deer.scn in Resources */,
 				CBDB4F8120FFC57800476C15 /* LaunchScreen.storyboard in Resources */,
 				9BC8680721027CE400A3F4AB /* bear.scn in Resources */,
 				9B25EE432100CF8B00550423 /* Menu.storyboard in Resources */,
+				9B52D76D210292230020C37D /* fish.scn in Resources */,
 				9B785D1C21021BCC004E4CE4 /* Confetti.scnp in Resources */,
 				CBDB4F9D2100BCD500476C15 /* haar_detail_NRM.jpg in Resources */,
 				CBDB4F9C2100BCD500476C15 /* Spinnen_Bein_tex_COLO.jpg in Resources */,

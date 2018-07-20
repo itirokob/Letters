@@ -10,6 +10,8 @@ import UIKit
 
 class MenuViewController: UIViewController {
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     var objects: [ObjectModel] = []
     var selectedIndex: Int = 0
     var objectDictionary: [String: Bool] = [:]
@@ -18,6 +20,11 @@ class MenuViewController: UIViewController {
         super.viewDidLoad()
         self.objectDictionary = UserDefaultsManager.instance.getObjectsDictionary()
         self.objects.append(contentsOf: ObjectReference.instance.objects)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.collectionView.reloadData()
     }
 
     // MARK: - Navigation
