@@ -70,23 +70,33 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
         sceneView.session.pause()
     }
     
+    /// Iterate through the nodes and set the text in each one
+    ///
+    /// - Parameters:
+    ///   - lettersNode: all nodes that we need to set text
+    ///   - wordArray: word to be written in nodes
+    fileprivate func setNodesText(_ lettersNode: SCNNode, _ wordArray: inout [Character]) {
+        for node in lettersNode.childNodes{
+            if wordArray.isEmpty == false {
+                if let nodeText = node.geometry as? SCNText {
+                    nodeText.string = String(wordArray.first!)
+                    wordArray.remove(at: 0)
+                }
+            }
+        }
+    }
+    
+    /// Set the letter nodes text
     func feedLetters(){
         if let lettersNode = self.lettersNode, let object = self.objectModel{
             var wordArray = Array(object.name.uppercased())
-
-            for node in lettersNode.childNodes{
-                if wordArray.isEmpty == false {
-                    if let nodeText = node.geometry as? SCNText {
-                        nodeText.string = String(wordArray.first!)
-                        wordArray.remove(at: 0)
-                    }
-                }
-            }
+            self.setNodesText(lettersNode, &wordArray)
         } else {
             print("Error in feedLetters")
         }
     }
     
+    /// Load the correct letters panel in the screen
     func loadCorrectLetters(){
         guard let object = self.objectModel else { return }
         
@@ -98,14 +108,29 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
             }
         }
     }
+    
+    /// When we have already put the 3D object, we don't need to detect planes anymore
+    func stopPlaneDetection(){
+        let configuration = ARWorldTrackingConfiguration()
+        configuration.planeDetection = .init(rawValue: 0)
+        self.sceneView.session.run(configuration)
+        self.sceneView.debugOptions = []
+    }
 
     // MARK: - ARSCNViewDelegate
      func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         let translation = anchor.transform.translation
         self.presenter?.foundPlane(position: SCNVector3(translation.x, translation.y, translation.z))
+        self.stopPlaneDetection()
     }
     
     // MARK: - GamePresenterDelegate
+    
+    /// If a plane is detected, we'll instantiate the object and the letters
+    ///
+    /// - Parameters:
+    ///   - node: object node to be instantiated
+    ///   - lettersNode: letter's node to be instatiated
     func instantiateNode(node: SCNNode, lettersNode: SCNNode) {
         sceneView.scene.rootNode.addChildNode(node)
         sceneView.scene.rootNode.addChildNode(lettersNode)
@@ -113,34 +138,42 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
         
         self.feedLetters()
     }
-    
-    func updateCorrectLetters(letter: String, index:Int) {
+
+    /// When user hits the correct letter, we'll update the display of letters in the screen
+    ///
+    /// - Parameters:
+    ///   - letter: letter pressed correctly
+    ///   - index: index of the letter in the correct word
+    ///   - nodePressed: node pressed (so we can remove it)
+    func updateCorrectLetters(letter: String, index:Int, nodePressed: SCNNode) {
         self.correctLettersArray[index].letter.text = letter
-        //Updates the correct letters
+        nodePressed.removeFromParentNode()
     }
 
+    /// When a wrong letter is pressed, we'll send a feedback to the user
     func wrongLetterPressed() {
-        //Sends a feedback for the user
     }
-
+    
+    
+    /// This func gets the letter from node pressed and check if it's correct
+    ///
+    /// - Parameter position: position where the user pressed
+    fileprivate func checkLetterPressed(_ position: CGPoint) {
+        let hitList = sceneView.hitTest(position, options: nil)
+        
+        //The SCNText is the geometry parameter from node
+        if let node = hitList.first?.node.parent {
+            if let nodeText = node.geometry as? SCNText, let letter = nodeText.string as? String {
+                self.presenter?.letterPressed(letter: letter, nodePressed: node)
+            }
+        }
+    }
+    
+    /// This func recognizes user's touches, when it happens we'll check if the pressed letter is correct
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
             let position = touch.location(in: sceneView)
-            let hitList = sceneView.hitTest(position, options: nil)
-            
-            //The SCNText is the geometry parameter from node
-            if let node = hitList.first?.node.parent {
-                if let nodeText = node.geometry as? SCNText, let letter = nodeText.string as? String {
-                    self.presenter?.letterPressed(letter: letter)
-                }
-            }
-            
-//            if hitList.count > 1{
-//                let node = hitList[1].node
-//                if let nodeText = node.geometry as? SCNText, let letter = nodeText.string as? String {
-//                    self.presenter?.letterPressed(letter: letter)
-//                }
-//            }
+            self.checkLetterPressed(position)
         }
     }
     
@@ -154,12 +187,5 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
     
     func sessionInterruptionEnded(_ session: ARSession) {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
-    }
-}
-
-extension float4x4 {
-    var translation: float3 {
-        let translation = self.columns.3
-        return float3(translation.x, translation.y, translation.z)
     }
 }

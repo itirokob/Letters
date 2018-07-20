@@ -10,8 +10,13 @@ import Foundation
 import ARKit
 
 protocol GamePresenterDelegate: class {
+    /// If a plane is detected, we'll instantiate the object and the letters
     func instantiateNode(node: SCNNode, lettersNode: SCNNode)
-    func updateCorrectLetters(letter:String, index:Int)
+    
+    /// When user hits the correct letter, we'll update the display of letters in the screen
+    func updateCorrectLetters(letter:String, index:Int, nodePressed: SCNNode)
+    
+    /// When a wrong letter is pressed, we'll send a feedback to the user
     func wrongLetterPressed()
 }
 
@@ -52,19 +57,17 @@ class GamePresenter {
     /// This func will be called when the user press a letter, we'll check if it's correct here
     ///
     /// - Parameter letter: letter pressed
-    func letterPressed(letter:String){
+    func letterPressed(letter:String, nodePressed:SCNNode){
         let word = self.objectModel.name
         if correctCounter < word.count {
             if letter == word.character(at: correctCounter).uppercased() {
-                delegate?.updateCorrectLetters(letter: letter, index: correctCounter)
+                delegate?.updateCorrectLetters(letter: letter, index: correctCounter, nodePressed: nodePressed)
                 correctCounter = correctCounter + 1
             } else {
                 delegate?.wrongLetterPressed()
             }
         }
     }
-    
-    
 }
 
 
