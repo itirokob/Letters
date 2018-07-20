@@ -10,19 +10,21 @@ import UIKit
 
 class ObjectModel {
     var id: String
+    var filename: String
     var name: String
     var hiddenImage: UIImage
     var image: UIImage
     var sceneName: String {
-        return name + ".scn"
+        return filename + ".scn"
     }
     var nodeName: String {
-        return name
+        return filename
     }
     
-    init(id: String, name: String, image: UIImage, hiddenImage: UIImage) {
+    init(id: String, name: String, filename: String, image: UIImage, hiddenImage: UIImage) {
         self.id = id
         self.name = name
+        self.filename = filename
         self.image = image
         self.hiddenImage = hiddenImage
     }
