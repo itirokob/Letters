@@ -44,7 +44,7 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if let cell = cell as? MenuCollectionViewCell {
             let state = objectDictionary[objects[row].id] ?? false
             if state {
-                cell.label.text = objects[row].name.capitalized
+                cell.label.text = objects[row].name.uppercased()
                 cell.label.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).withAlphaComponent(0.5)
                 cell.image.image = objects[row].image
             } else {
@@ -59,5 +59,8 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
         self.selectedIndex = indexPath.row
         self.performSegue(withIdentifier: "goToGameSegue", sender: self)
     }
+    
+    /// Unwind to Menu
+    @IBAction func unwindToMenu(segue:UIStoryboardSegue) { }
     
 }

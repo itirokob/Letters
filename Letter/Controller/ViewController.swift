@@ -78,7 +78,17 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
     }
     
     @IBAction func backButton(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+//        self.dismiss(animated: true, completion: nil)
+        self.performSegue(withIdentifier: "endGameSegue", sender: self)
+    }
+    
+    /// Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "endGameSegue" {
+            if let viewController = segue.destination as? EndGameViewController {
+                viewController.object = self.objectModel
+            }
+        }
     }
     
     /// Iterate through the nodes and set the text in each one

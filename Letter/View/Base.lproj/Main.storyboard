@@ -56,7 +56,7 @@
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iT9-bK-d96">
                                 <rect key="frame" x="0.0" y="600" width="375" height="66.5"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Jiq-kb-0YL">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                                 <blurEffect style="light"/>
@@ -90,11 +90,20 @@
                         <outlet property="fxView" destination="iT9-bK-d96" id="lBw-gr-6gn"/>
                         <outlet property="sceneView" destination="0JI-04-0ez" id="8cG-AE-KC1"/>
                         <outlet property="stackView" destination="AQE-f4-SyQ" id="ayS-Le-RJm"/>
+                        <segue destination="lJB-Ai-lhz" kind="presentation" identifier="endGameSegue" modalPresentationStyle="overFullScreen" id="hHj-Im-9YX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="32.833583208395808"/>
+        </scene>
+        <!--EndGame-->
+        <scene sceneID="OtZ-q6-2sT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="EndGame" id="lJB-Ai-lhz" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XbL-yO-puW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="598" y="32"/>
         </scene>
     </scenes>
     <resources>

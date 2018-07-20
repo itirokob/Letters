@@ -23,6 +23,8 @@
 		9B785D1B21021BCC004E4CE4 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B785D1921021BCC004E4CE4 /* spark.png */; };
 		9B785D1C21021BCC004E4CE4 /* Confetti.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 9B785D1A21021BCC004E4CE4 /* Confetti.scnp */; };
 		9B785D202102237A004E4CE4 /* SumOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B785D1F2102237A004E4CE4 /* SumOperator.swift */; };
+		9B785D2221023A29004E4CE4 /* EndGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B785D2121023A29004E4CE4 /* EndGame.storyboard */; };
+		9B785D2421023C9D004E4CE4 /* EndGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B785D2321023C9D004E4CE4 /* EndGameViewController.swift */; };
 		CB2F9B4021020BA90029889A /* Float4x4Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2F9B3F21020BA90029889A /* Float4x4Extension.swift */; };
 		CB2F9B41210212030029889A /* robot.scn in Resources */ = {isa = PBXBuildFile; fileRef = 9B25EE612102099200550423 /* robot.scn */; };
 		CB710D9221010DA300D41D53 /* CorrectLetter.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB710D9121010DA300D41D53 /* CorrectLetter.xib */; };
@@ -61,6 +63,8 @@
 		9B785D1921021BCC004E4CE4 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		9B785D1A21021BCC004E4CE4 /* Confetti.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = Confetti.scnp; sourceTree = "<group>"; };
 		9B785D1F2102237A004E4CE4 /* SumOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumOperator.swift; sourceTree = "<group>"; };
+		9B785D2121023A29004E4CE4 /* EndGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EndGame.storyboard; sourceTree = "<group>"; };
+		9B785D2321023C9D004E4CE4 /* EndGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameViewController.swift; sourceTree = "<group>"; };
 		CB2F9B3F21020BA90029889A /* Float4x4Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Float4x4Extension.swift; sourceTree = "<group>"; };
 		CB710D9121010DA300D41D53 /* CorrectLetter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CorrectLetter.xib; sourceTree = "<group>"; };
 		CB710D9321010EB700D41D53 /* CorrectLetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectLetter.swift; sourceTree = "<group>"; };
@@ -190,6 +194,7 @@
 				CBDB4F7820FFC57600476C15 /* ViewController.swift */,
 				9B25EE472100D2F000550423 /* MenuViewController.swift */,
 				9B25EE4E2100D81100550423 /* InitialScreenViewController.swift */,
+				9B785D2321023C9D004E4CE4 /* EndGameViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 			children = (
 				CBDB4F7A20FFC57600476C15 /* Main.storyboard */,
 				9B25EE422100CF8B00550423 /* Menu.storyboard */,
+				9B785D2121023A29004E4CE4 /* EndGame.storyboard */,
 				9B25EE572100E15200550423 /* CustomCells */,
 				9B25EE442100D01A00550423 /* CustomView */,
 			);
@@ -308,6 +314,7 @@
 			files = (
 				CBDB4F9A2100BCD500476C15 /* SH3.png in Resources */,
 				CB2F9B41210212030029889A /* robot.scn in Resources */,
+				9B785D2221023A29004E4CE4 /* EndGame.storyboard in Resources */,
 				9B25EE602102090100550423 /* robot.png in Resources */,
 				CBDB4F9B2100BCD500476C15 /* Spinnen_Bein_tex_2.jp.jpg in Resources */,
 				9B785D1B21021BCC004E4CE4 /* spark.png in Resources */,
@@ -340,6 +347,7 @@
 				9B25EE562100E03600550423 /* IndiaScreen.swift in Sources */,
 				9B25EE4F2100D81100550423 /* InitialScreenViewController.swift in Sources */,
 				9B25EE412100CE9400550423 /* ObjectReference.swift in Sources */,
+				9B785D2421023C9D004E4CE4 /* EndGameViewController.swift in Sources */,
 				9B25EE592100F51300550423 /* UserDefaultsManager.swift in Sources */,
 				CBDB4F8F2100B37800476C15 /* ObjectModel.swift in Sources */,
 				CBDB4F7920FFC57600476C15 /* ViewController.swift in Sources */,
