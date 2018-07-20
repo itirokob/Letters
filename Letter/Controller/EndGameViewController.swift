@@ -25,11 +25,11 @@ class EndGameViewController: UIViewController {
         guard let object = self.object else { return }
         self.label.text = object.name.uppercased()
         self.imageView.image = object.image
+        
+        UserDefaultsManager.instance.updateObjectsDictionary(with: [object.id: true])
     }
     
     @IBAction func backButton(_ sender: UIButton) {
         self.performSegue(withIdentifier: "backToMenuSegue", sender: self)
     }
-    
-
 }

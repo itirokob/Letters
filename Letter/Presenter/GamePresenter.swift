@@ -56,7 +56,6 @@ class GamePresenter {
         self.delegate?.instantiateNode(node: node, lettersNode: lettersNode)
     }
     
-    
     /// This func will be called when the user press a letter, we'll check if it's correct here
     ///
     /// - Parameter letter: letter pressed
