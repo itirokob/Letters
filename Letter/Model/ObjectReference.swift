@@ -24,7 +24,8 @@ class ObjectReference: NSObject {
         ObjectModel(id: "4", name: "cachorro", filename: "dog", image: #imageLiteral(resourceName: "dog"), hiddenImage: #imageLiteral(resourceName: "hiddenDog")),
         ObjectModel(id: "5", name: "urso", filename: "bear", image: #imageLiteral(resourceName: "bear"), hiddenImage: #imageLiteral(resourceName: "hiddenBear")),
         ObjectModel(id: "6", name: "girafa", filename: "giraffe", image: #imageLiteral(resourceName: "giraffe"), hiddenImage: #imageLiteral(resourceName: "hiddenGiraffe")),
-        ObjectModel(id: "7", name: "peixe", filename: "fish", image: #imageLiteral(resourceName: "fish"), hiddenImage: #imageLiteral(resourceName: "hiddenfish"))
+        ObjectModel(id: "7", name: "peixe", filename: "fish", image: #imageLiteral(resourceName: "fish"), hiddenImage: #imageLiteral(resourceName: "hiddenfish")),
+        ObjectModel(id: "8", name: "ovelha", filename: "sheep", image: #imageLiteral(resourceName: "sheep"), hiddenImage: #imageLiteral(resourceName: "hiddenSheep"))
     ]
     
     private override init() {
