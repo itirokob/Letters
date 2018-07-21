@@ -57,6 +57,7 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 cell.image.image = objects[row].image
             } else {
                 cell.label.text = ""
+                cell.label.backgroundColor = .clear
                 cell.image.image = objects[row].hiddenImage
             }
         }
