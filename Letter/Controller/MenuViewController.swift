@@ -24,6 +24,7 @@ class MenuViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.objectDictionary = UserDefaultsManager.instance.getObjectsDictionary()
         self.collectionView.reloadData()
     }
 
