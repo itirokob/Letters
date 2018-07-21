@@ -34,6 +34,8 @@
 		9BBB61512103B3BA004EF011 /* octopus.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BBB61502103B3BA004EF011 /* octopus.png */; };
 		9BBB61592103B4C3004EF011 /* octopus.scn in Resources */ = {isa = PBXBuildFile; fileRef = 9BBB61582103B4BE004EF011 /* octopus.scn */; };
 		9BBB615E2103C7A4004EF011 /* owl.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BBB615D2103C7A4004EF011 /* owl.png */; };
+		9BBB61662103D65D004EF011 /* owl.scn in Resources */ = {isa = PBXBuildFile; fileRef = 9BBB615F2103C7F0004EF011 /* owl.scn */; };
+		9BBB61672103D661004EF011 /* sheep.scn in Resources */ = {isa = PBXBuildFile; fileRef = 9BBB614321039A85004EF011 /* sheep.scn */; };
 		9BC867F721026F9100A3F4AB /* deer.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BC867F621026F9100A3F4AB /* deer.png */; };
 		9BC867F9210270FC00A3F4AB /* deer.scn in Resources */ = {isa = PBXBuildFile; fileRef = 9BC867F821026FBA00A3F4AB /* deer.scn */; };
 		9BC867FC2102764500A3F4AB /* dog.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BC867FB2102764500A3F4AB /* dog.png */; };
@@ -461,12 +463,14 @@
 				9B785D1C21021BCC004E4CE4 /* Confetti.scnp in Resources */,
 				CBDB4F9D2100BCD500476C15 /* haar_detail_NRM.jpg in Resources */,
 				CBDB4F9C2100BCD500476C15 /* Spinnen_Bein_tex_COLO.jpg in Resources */,
+				9BBB61672103D661004EF011 /* sheep.scn in Resources */,
 				CBDB4F7E20FFC57800476C15 /* Assets.xcassets in Resources */,
 				9B52D75F210282F20020C37D /* elephant.scn in Resources */,
 				9B25EE522100DC3400550423 /* forrest.xib in Resources */,
 				CBDB4F7C20FFC57600476C15 /* Main.storyboard in Resources */,
 				9BC867FC2102764500A3F4AB /* dog.png in Resources */,
 				9B25EE4B2100D74300550423 /* savana.xib in Resources */,
+				9BBB61662103D65D004EF011 /* owl.scn in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
