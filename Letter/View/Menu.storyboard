@@ -30,17 +30,46 @@
                                     <segue destination="Hj0-Hy-B7K" kind="show" id="ht4-Hm-gbZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GnK-W8-hJR">
+                                <rect key="frame" x="315" y="602" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GnK-W8-hJR" secondAttribute="height" multiplier="1:1" id="1uz-Oh-gjP"/>
+                                    <constraint firstAttribute="height" constant="45" id="rfj-7y-Av0"/>
+                                </constraints>
+                                <state key="normal" image="music"/>
+                                <connections>
+                                    <action selector="musicButtonAction:" destination="pWR-q1-gLW" eventType="touchUpInside" id="9Ui-te-7hp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHQ-d6-Ezn">
+                                <rect key="frame" x="315" y="549" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Qxt-lN-rXU"/>
+                                    <constraint firstAttribute="width" secondItem="cHQ-d6-Ezn" secondAttribute="height" multiplier="1:1" id="eHt-iT-JAr"/>
+                                </constraints>
+                                <state key="normal" image="sfx"/>
+                                <connections>
+                                    <action selector="sfxButtonAction:" destination="pWR-q1-gLW" eventType="touchUpInside" id="TxM-mj-tCD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="iDo-Pk-Zcy" firstAttribute="centerX" secondItem="NON-6Q-kZA" secondAttribute="centerX" id="Sl2-rh-ebM"/>
+                            <constraint firstItem="GnK-W8-hJR" firstAttribute="top" secondItem="cHQ-d6-Ezn" secondAttribute="bottom" constant="8" id="UGP-hE-3GO"/>
+                            <constraint firstItem="NON-6Q-kZA" firstAttribute="trailing" secondItem="GnK-W8-hJR" secondAttribute="trailing" constant="15" id="cZh-RY-HrP"/>
+                            <constraint firstItem="NON-6Q-kZA" firstAttribute="bottom" secondItem="GnK-W8-hJR" secondAttribute="bottom" constant="20" id="f8m-ue-YE7"/>
+                            <constraint firstItem="cHQ-d6-Ezn" firstAttribute="centerX" secondItem="GnK-W8-hJR" secondAttribute="centerX" id="lt9-xj-OkU"/>
                             <constraint firstItem="NON-6Q-kZA" firstAttribute="bottom" secondItem="iDo-Pk-Zcy" secondAttribute="bottom" constant="60" id="vSx-Mg-FHs"/>
+                            <constraint firstItem="cHQ-d6-Ezn" firstAttribute="width" secondItem="cHQ-d6-Ezn" secondAttribute="height" multiplier="1:1" id="wY3-7j-igh"/>
                             <constraint firstItem="iDo-Pk-Zcy" firstAttribute="width" secondItem="fGc-qf-t0L" secondAttribute="width" multiplier="0.4" id="waR-0G-I0O"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NON-6Q-kZA"/>
                     </view>
                     <connections>
                         <outlet property="button" destination="iDo-Pk-Zcy" id="UOx-7L-HT3"/>
+                        <outlet property="musicButton" destination="GnK-W8-hJR" id="nfD-kU-Tcz"/>
+                        <outlet property="sfxButton" destination="cHQ-d6-Ezn" id="hAP-KB-pYB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IsF-0b-mF4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -178,7 +207,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="music" width="50" height="50"/>
         <image name="redButton" width="165" height="165"/>
+        <image name="sfx" width="50" height="50"/>
         <namedColor name="blue">
             <color red="0.11400000005960464" green="0.76899999380111694" blue="0.94099998474121094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
