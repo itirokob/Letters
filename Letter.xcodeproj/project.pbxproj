@@ -38,6 +38,10 @@
 		9BBB61672103D661004EF011 /* sheep.scn in Resources */ = {isa = PBXBuildFile; fileRef = 9BBB614321039A85004EF011 /* sheep.scn */; };
 		9BBB616B210415DF004EF011 /* kids.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 9BBB616A210415DF004EF011 /* kids.m4a */; };
 		9BBB616E21041614004EF011 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB616D21041614004EF011 /* AudioManager.swift */; };
+		9BBB61732104B746004EF011 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BBB61722104B746004EF011 /* Tutorial.storyboard */; };
+		9BBB61752104B8EF004EF011 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB61742104B8EF004EF011 /* TutorialViewController.swift */; };
+		9BBB61772104BECE004EF011 /* TutorialReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB61762104BECE004EF011 /* TutorialReference.swift */; };
+		9BBB61792104C1C8004EF011 /* TutorialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB61782104C1C8004EF011 /* TutorialCollectionViewCell.swift */; };
 		9BC867F721026F9100A3F4AB /* deer.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BC867F621026F9100A3F4AB /* deer.png */; };
 		9BC867F9210270FC00A3F4AB /* deer.scn in Resources */ = {isa = PBXBuildFile; fileRef = 9BC867F821026FBA00A3F4AB /* deer.scn */; };
 		9BC867FC2102764500A3F4AB /* dog.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BC867FB2102764500A3F4AB /* dog.png */; };
@@ -96,6 +100,10 @@
 		9BBB615F2103C7F0004EF011 /* owl.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = owl.scn; sourceTree = "<group>"; };
 		9BBB616A210415DF004EF011 /* kids.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = kids.m4a; sourceTree = "<group>"; };
 		9BBB616D21041614004EF011 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		9BBB61722104B746004EF011 /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
+		9BBB61742104B8EF004EF011 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		9BBB61762104BECE004EF011 /* TutorialReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialReference.swift; sourceTree = "<group>"; };
+		9BBB61782104C1C8004EF011 /* TutorialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialCollectionViewCell.swift; sourceTree = "<group>"; };
 		9BC867F621026F9100A3F4AB /* deer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deer.png; sourceTree = "<group>"; };
 		9BC867F821026FBA00A3F4AB /* deer.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = deer.scn; sourceTree = "<group>"; };
 		9BC867FB2102764500A3F4AB /* dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dog.png; sourceTree = "<group>"; };
@@ -161,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				9B25EE452100D06900550423 /* MenuCollectionViewCell.swift */,
+				9BBB61782104C1C8004EF011 /* TutorialCollectionViewCell.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -338,6 +347,7 @@
 				9B25EE472100D2F000550423 /* MenuViewController.swift */,
 				9B25EE4E2100D81100550423 /* InitialScreenViewController.swift */,
 				9B785D2321023C9D004E4CE4 /* EndGameViewController.swift */,
+				9BBB61742104B8EF004EF011 /* TutorialViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -348,6 +358,7 @@
 				CBDB4F7A20FFC57600476C15 /* Main.storyboard */,
 				9B25EE422100CF8B00550423 /* Menu.storyboard */,
 				9B785D2121023A29004E4CE4 /* EndGame.storyboard */,
+				9BBB61722104B746004EF011 /* Tutorial.storyboard */,
 				9B25EE572100E15200550423 /* CustomCells */,
 				9B25EE442100D01A00550423 /* CustomView */,
 			);
@@ -363,6 +374,7 @@
 				9B25EE402100CE9400550423 /* ObjectReference.swift */,
 				9B25EE4C2100D7A400550423 /* InitialScreenReference.swift */,
 				9B25EE582100F51300550423 /* UserDefaultsManager.swift */,
+				9BBB61762104BECE004EF011 /* TutorialReference.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -499,6 +511,7 @@
 				9B52D75F210282F20020C37D /* elephant.scn in Resources */,
 				9B25EE522100DC3400550423 /* forrest.xib in Resources */,
 				CBDB4F7C20FFC57600476C15 /* Main.storyboard in Resources */,
+				9BBB61732104B746004EF011 /* Tutorial.storyboard in Resources */,
 				9BC867FC2102764500A3F4AB /* dog.png in Resources */,
 				9B25EE4B2100D74300550423 /* savana.xib in Resources */,
 				9BBB61662103D65D004EF011 /* owl.scn in Resources */,
@@ -518,12 +531,15 @@
 				9B25EE562100E03600550423 /* IndiaScreen.swift in Sources */,
 				9B25EE4F2100D81100550423 /* InitialScreenViewController.swift in Sources */,
 				9B25EE412100CE9400550423 /* ObjectReference.swift in Sources */,
+				9BBB61792104C1C8004EF011 /* TutorialCollectionViewCell.swift in Sources */,
 				9BBB616E21041614004EF011 /* AudioManager.swift in Sources */,
 				9B785D2421023C9D004E4CE4 /* EndGameViewController.swift in Sources */,
+				9BBB61752104B8EF004EF011 /* TutorialViewController.swift in Sources */,
 				9B25EE592100F51300550423 /* UserDefaultsManager.swift in Sources */,
 				CBDB4F8F2100B37800476C15 /* ObjectModel.swift in Sources */,
 				CBDB4F7920FFC57600476C15 /* ViewController.swift in Sources */,
 				CB710D972101168C00D41D53 /* StringExtension.swift in Sources */,
+				9BBB61772104BECE004EF011 /* TutorialReference.swift in Sources */,
 				9B25EE482100D2F000550423 /* MenuViewController.swift in Sources */,
 				CBDB4F7520FFC57600476C15 /* AppDelegate.swift in Sources */,
 				CBDB4F8D2100B1B600476C15 /* GamePresenter.swift in Sources */,

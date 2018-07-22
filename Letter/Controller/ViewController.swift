@@ -82,6 +82,12 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
         self.dismiss(animated: true, completion: nil)
     }
     
+    // Show the Tutorial
+    @IBAction func helpButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "showTutorialSegue", sender: self)
+    }
+    
+    
     /// Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "endGameSegue" {

@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -56,7 +55,7 @@
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iT9-bK-d96">
                                 <rect key="frame" x="0.0" y="600" width="375" height="66.5"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Jiq-kb-0YL">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                                 <blurEffect style="light"/>
@@ -65,6 +64,16 @@
                                 <rect key="frame" x="0.0" y="600.5" width="375" height="66.5"/>
                                 <color key="backgroundColor" name="green"/>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocT-gY-8JI">
+                                <rect key="frame" x="319.5" y="65" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ocT-gY-8JI" secondAttribute="height" multiplier="1:1" id="5sb-wF-Y7R"/>
+                                </constraints>
+                                <state key="normal" image="helpButton"/>
+                                <connections>
+                                    <action selector="helpButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="QtN-BQ-nGV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -73,6 +82,8 @@
                             <constraint firstItem="0JI-04-0ez" firstAttribute="top" secondItem="75s-T9-MXf" secondAttribute="top" id="4hu-sm-JQ8"/>
                             <constraint firstItem="XCo-Mw-m00" firstAttribute="width" secondItem="XCo-Mw-m00" secondAttribute="height" multiplier="1:1" id="6M0-R2-xhM"/>
                             <constraint firstItem="0JI-04-0ez" firstAttribute="trailing" secondItem="wah-ed-7xa" secondAttribute="trailing" id="JnQ-HM-Qte"/>
+                            <constraint firstItem="ocT-gY-8JI" firstAttribute="centerX" secondItem="bZO-kH-bjm" secondAttribute="centerX" id="KVy-fT-Ii0"/>
+                            <constraint firstItem="ocT-gY-8JI" firstAttribute="top" secondItem="XCo-Mw-m00" secondAttribute="bottom" constant="10" id="LLH-rP-TU0"/>
                             <constraint firstItem="AQE-f4-SyQ" firstAttribute="height" secondItem="0JI-04-0ez" secondAttribute="height" multiplier="0.1" id="Lqp-OH-mkj"/>
                             <constraint firstItem="AQE-f4-SyQ" firstAttribute="trailing" secondItem="wah-ed-7xa" secondAttribute="trailing" id="aHP-3L-le6"/>
                             <constraint firstItem="AQE-f4-SyQ" firstAttribute="leading" secondItem="wah-ed-7xa" secondAttribute="leading" id="bGm-zO-z5Z"/>
@@ -81,6 +92,7 @@
                             <constraint firstItem="AQE-f4-SyQ" firstAttribute="bottom" secondItem="wah-ed-7xa" secondAttribute="bottom" id="lws-qQ-mAs"/>
                             <constraint firstItem="iT9-bK-d96" firstAttribute="centerY" secondItem="AQE-f4-SyQ" secondAttribute="centerY" id="mDe-Sn-SqQ"/>
                             <constraint firstItem="0JI-04-0ez" firstAttribute="bottom" secondItem="wah-ed-7xa" secondAttribute="bottom" id="nrN-Na-DS2"/>
+                            <constraint firstItem="ocT-gY-8JI" firstAttribute="width" secondItem="bZO-kH-bjm" secondAttribute="width" id="oTd-np-zuq"/>
                             <constraint firstItem="iT9-bK-d96" firstAttribute="centerX" secondItem="AQE-f4-SyQ" secondAttribute="centerX" id="yFi-Ss-WGJ"/>
                             <constraint firstItem="wah-ed-7xa" firstAttribute="trailing" secondItem="XCo-Mw-m00" secondAttribute="trailing" constant="20" id="zXI-1R-JXV"/>
                         </constraints>
@@ -91,11 +103,20 @@
                         <outlet property="sceneView" destination="0JI-04-0ez" id="8cG-AE-KC1"/>
                         <outlet property="stackView" destination="AQE-f4-SyQ" id="ayS-Le-RJm"/>
                         <segue destination="lJB-Ai-lhz" kind="presentation" identifier="endGameSegue" modalPresentationStyle="overFullScreen" id="hHj-Im-9YX"/>
+                        <segue destination="gpw-sO-7qt" kind="presentation" identifier="showTutorialSegue" modalPresentationStyle="overFullScreen" id="0Ju-Lb-482"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="32.833583208395808"/>
+        </scene>
+        <!--Tutorial-->
+        <scene sceneID="Agb-8X-fM2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tutorial" id="gpw-sO-7qt" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yrm-ke-gyf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="588" y="-49"/>
         </scene>
         <!--EndGame-->
         <scene sceneID="OtZ-q6-2sT">
@@ -107,6 +128,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="helpButton" width="50" height="50"/>
         <namedColor name="green">
             <color red="0.25499999523162842" green="0.83899998664855957" blue="0.27099999785423279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
