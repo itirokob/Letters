@@ -26,6 +26,7 @@ class MenuViewController: UIViewController {
         super.viewWillAppear(animated)
         self.objectDictionary = UserDefaultsManager.instance.getObjectsDictionary()
         self.collectionView.reloadData()
+        AudioManager.instance.highVolume()
     }
 
     // MARK: - Navigation

@@ -30,6 +30,7 @@ class AudioManager {
     var SFXplayer: AVAudioPlayer?
     
     //The background music player
+    var musicPlayer: AVAudioPlayer?
     var backgroundPlayer: AVAudioPlayer?
     let defaults = UserDefaults.standard
     
@@ -63,9 +64,9 @@ class AudioManager {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
             try AVAudioSession.sharedInstance().setActive(true)
             
-            backgroundPlayer = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+            musicPlayer = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
             
-            guard let backgroundPlayer = backgroundPlayer else { return }
+            guard let backgroundPlayer = musicPlayer else { return }
             
             backgroundPlayer.volume = 0.8
             backgroundPlayer.numberOfLoops = -1
@@ -88,8 +89,13 @@ class AudioManager {
         return url
     }
     
-    /// Stop the background Music
+    /// Stop the Music
     func stopMusic() {
+        musicPlayer?.stop()
+    }
+    
+    /// Stop the background Audio
+    func stopBackground() {
         backgroundPlayer?.stop()
     }
     
@@ -153,6 +159,14 @@ class AudioManager {
         } catch let error {
             print(error.localizedDescription)
         }
+    }
+    
+    func lowVolume() {
+        musicPlayer?.volume = 0.1
+    }
+    
+    func highVolume() {
+        musicPlayer?.volume = 0.8
     }
     
     /// Singleton

@@ -53,6 +53,8 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
         // Hide stack view until presented on the game
         self.stackView.isHidden = true
         self.fxView.isHidden = true
+        
+        AudioManager.instance.lowVolume()
     }
     
     override func viewWillAppear(_ animated: Bool) {
