@@ -15,6 +15,8 @@ class InitialScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Play music
+        AudioManager.instance.playGameMusic(for: .soundtrack)
     }
     
     override func viewWillAppear(_ animated: Bool) {

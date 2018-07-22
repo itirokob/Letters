@@ -11,13 +11,14 @@ import Foundation
 enum Keys: String {
     case numberOfExecutions
     case objDict
+    case music
+    case sfx
 }
 
 class UserDefaultsManager {
     
     static let instance = UserDefaultsManager()
     let defaults = UserDefaults.standard
-    
     
     /// Retrieve stored dictionary on UserDefaults
     ///
@@ -36,6 +37,30 @@ class UserDefaultsManager {
         let oldValue = self.getObjectsDictionary()
         let newValue = oldValue.merging(dict) {$1}
         defaults.set(newValue, forKey: Keys.objDict.rawValue)
+    }
+    
+    func getMusicState() -> Bool {
+        return defaults.bool(forKey: Keys.music.rawValue)
+    }
+    
+    func setMusicState(to state: Bool) {
+        defaults.set(state, forKey: Keys.music.rawValue)
+    }
+    
+    func getSFXState() -> Bool {
+        return defaults.bool(forKey: Keys.sfx.rawValue)
+    }
+    
+    func setSFXState(to state: Bool) {
+        defaults.set(state, forKey: Keys.sfx.rawValue)
+    }
+    
+    func getNumberOfExecutions() -> Int {
+        return defaults.integer(forKey: Keys.numberOfExecutions.rawValue)
+    }
+    
+    func updateNumbeOfExecutions() {
+        defaults.set(self.getNumberOfExecutions() + 1, forKey: Keys.numberOfExecutions.rawValue)
     }
     
     /// Singleton

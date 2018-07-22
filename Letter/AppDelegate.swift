@@ -15,6 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // First time configuration
+        if UserDefaultsManager.instance.getNumberOfExecutions() == 0 {
+            UserDefaultsManager.instance.setMusicState(to: true)
+            UserDefaultsManager.instance.setSFXState(to: true)
+        }
+        UserDefaultsManager.instance.updateNumbeOfExecutions()
         return true
     }
 

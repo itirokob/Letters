@@ -36,6 +36,8 @@
 		9BBB615E2103C7A4004EF011 /* owl.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BBB615D2103C7A4004EF011 /* owl.png */; };
 		9BBB61662103D65D004EF011 /* owl.scn in Resources */ = {isa = PBXBuildFile; fileRef = 9BBB615F2103C7F0004EF011 /* owl.scn */; };
 		9BBB61672103D661004EF011 /* sheep.scn in Resources */ = {isa = PBXBuildFile; fileRef = 9BBB614321039A85004EF011 /* sheep.scn */; };
+		9BBB616B210415DF004EF011 /* kids.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 9BBB616A210415DF004EF011 /* kids.m4a */; };
+		9BBB616E21041614004EF011 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB616D21041614004EF011 /* AudioManager.swift */; };
 		9BC867F721026F9100A3F4AB /* deer.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BC867F621026F9100A3F4AB /* deer.png */; };
 		9BC867F9210270FC00A3F4AB /* deer.scn in Resources */ = {isa = PBXBuildFile; fileRef = 9BC867F821026FBA00A3F4AB /* deer.scn */; };
 		9BC867FC2102764500A3F4AB /* dog.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BC867FB2102764500A3F4AB /* dog.png */; };
@@ -92,6 +94,8 @@
 		9BBB61582103B4BE004EF011 /* octopus.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = octopus.scn; sourceTree = "<group>"; };
 		9BBB615D2103C7A4004EF011 /* owl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = owl.png; sourceTree = "<group>"; };
 		9BBB615F2103C7F0004EF011 /* owl.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = owl.scn; sourceTree = "<group>"; };
+		9BBB616A210415DF004EF011 /* kids.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = kids.m4a; sourceTree = "<group>"; };
+		9BBB616D21041614004EF011 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		9BC867F621026F9100A3F4AB /* deer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deer.png; sourceTree = "<group>"; };
 		9BC867F821026FBA00A3F4AB /* deer.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = deer.scn; sourceTree = "<group>"; };
 		9BC867FB2102764500A3F4AB /* dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dog.png; sourceTree = "<group>"; };
@@ -224,6 +228,30 @@
 			path = Owl;
 			sourceTree = "<group>";
 		};
+		9BBB6168210415D0004EF011 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				9BBB6169210415D5004EF011 /* Soundtrack */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		9BBB6169210415D5004EF011 /* Soundtrack */ = {
+			isa = PBXGroup;
+			children = (
+				9BBB616A210415DF004EF011 /* kids.m4a */,
+			);
+			path = Soundtrack;
+			sourceTree = "<group>";
+		};
+		9BBB616C210415FE004EF011 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9BBB616D21041614004EF011 /* AudioManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		9BC867F321026F7000A3F4AB /* Deer */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +322,7 @@
 				CB710D952101166E00D41D53 /* Extension */,
 				CBDB4F8B20FFC82400476C15 /* Presenter */,
 				CBDB4F8820FFC58900476C15 /* Controller */,
+				9BBB616C210415FE004EF011 /* Services */,
 				CBDB4F7D20FFC57800476C15 /* Assets.xcassets */,
 				CBDB4F7620FFC57600476C15 /* art.scnassets */,
 				CBDB4F7F20FFC57800476C15 /* LaunchScreen.storyboard */,
@@ -328,6 +357,7 @@
 		CBDB4F8A20FFC58F00476C15 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9BBB6168210415D0004EF011 /* Audio */,
 				CBDB4F922100BB1100476C15 /* 3D Models */,
 				CBDB4F8E2100B37800476C15 /* ObjectModel.swift */,
 				9B25EE402100CE9400550423 /* ObjectReference.swift */,
@@ -459,6 +489,7 @@
 				CBDB4F8120FFC57800476C15 /* LaunchScreen.storyboard in Resources */,
 				9BC8680721027CE400A3F4AB /* bear.scn in Resources */,
 				9B25EE432100CF8B00550423 /* Menu.storyboard in Resources */,
+				9BBB616B210415DF004EF011 /* kids.m4a in Resources */,
 				9B52D76D210292230020C37D /* fish.scn in Resources */,
 				9B785D1C21021BCC004E4CE4 /* Confetti.scnp in Resources */,
 				CBDB4F9D2100BCD500476C15 /* haar_detail_NRM.jpg in Resources */,
@@ -487,6 +518,7 @@
 				9B25EE562100E03600550423 /* IndiaScreen.swift in Sources */,
 				9B25EE4F2100D81100550423 /* InitialScreenViewController.swift in Sources */,
 				9B25EE412100CE9400550423 /* ObjectReference.swift in Sources */,
+				9BBB616E21041614004EF011 /* AudioManager.swift in Sources */,
 				9B785D2421023C9D004E4CE4 /* EndGameViewController.swift in Sources */,
 				9B25EE592100F51300550423 /* UserDefaultsManager.swift in Sources */,
 				CBDB4F8F2100B37800476C15 /* ObjectModel.swift in Sources */,

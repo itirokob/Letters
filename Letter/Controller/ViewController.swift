@@ -37,9 +37,6 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
         sceneView.scene = scene
         sceneView.delegate = self
         
-        // DEBUG: Show statistics such as fps and timing information
-//        sceneView.showsStatistics = true
-        
         //Check if we have a object model already
         if self.objectModel == nil {
             self.objectModel = ObjectReference.instance.objects[0]
@@ -53,6 +50,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
         //Load underlines for correct letters
         self.loadCorrectLetters()
         
+        // Hide stack view until presented on the game
         self.stackView.isHidden = true
         self.fxView.isHidden = true
     }
