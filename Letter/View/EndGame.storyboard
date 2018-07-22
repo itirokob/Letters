@@ -25,6 +25,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L7S-gv-one" customClass="ConfettiView" customModule="Letter" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V4v-5h-AAI">
                                             <rect key="frame" x="56.5" y="175" width="262.5" height="350"/>
                                             <subviews>
@@ -66,8 +70,12 @@
                                     <constraints>
                                         <constraint firstItem="V4v-5h-AAI" firstAttribute="height" secondItem="3sz-QG-ata" secondAttribute="height" multiplier="0.5" id="2d8-uh-Zdj"/>
                                         <constraint firstItem="V4v-5h-AAI" firstAttribute="centerY" secondItem="3sz-QG-ata" secondAttribute="centerY" id="CvR-yC-UVl"/>
+                                        <constraint firstItem="L7S-gv-one" firstAttribute="centerX" secondItem="3sz-QG-ata" secondAttribute="centerX" id="G13-Tm-V4K"/>
+                                        <constraint firstItem="L7S-gv-one" firstAttribute="width" secondItem="3sz-QG-ata" secondAttribute="width" id="KrV-fo-Evg"/>
+                                        <constraint firstItem="L7S-gv-one" firstAttribute="height" secondItem="3sz-QG-ata" secondAttribute="height" id="Lpi-FH-Xcy"/>
                                         <constraint firstItem="V4v-5h-AAI" firstAttribute="width" secondItem="3sz-QG-ata" secondAttribute="width" multiplier="0.7" id="W29-H3-DCn"/>
                                         <constraint firstItem="V4v-5h-AAI" firstAttribute="centerX" secondItem="3sz-QG-ata" secondAttribute="centerX" id="Y0f-tS-YN7"/>
+                                        <constraint firstItem="L7S-gv-one" firstAttribute="centerY" secondItem="3sz-QG-ata" secondAttribute="centerY" id="ieY-dm-giG"/>
                                     </constraints>
                                 </view>
                                 <blurEffect style="light"/>

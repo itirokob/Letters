@@ -27,6 +27,7 @@ class EndGameViewController: UIViewController {
         self.imageView.image = object.image
         
         UserDefaultsManager.instance.updateObjectsDictionary(with: [object.id: true])
+        AudioManager.instance.playSFX(for: .kidsCheer)
     }
     
     @IBAction func backButton(_ sender: UIButton) {

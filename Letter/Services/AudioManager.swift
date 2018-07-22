@@ -10,7 +10,7 @@ import Foundation
 import AVFoundation
 
 enum SFX {
-    case sound
+    case kidsCheer
 }
 
 enum Music {
@@ -22,7 +22,7 @@ let audioFilename: [Music: String] =
     [.soundtrack: "kids.m4a"]
 
 let audioSFX: [SFX: String] =
-    [:]
+    [.kidsCheer: "kids_cheer.mp3"]
 
 class AudioManager {
     
