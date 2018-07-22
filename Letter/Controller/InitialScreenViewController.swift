@@ -12,6 +12,7 @@ class InitialScreenViewController: UIViewController {
 
     @IBOutlet weak var button: UIButton!
     var customView: UIView?
+    var buttonName: String = ""
     
     @IBOutlet weak var sfxButton: UIButton!
     @IBOutlet weak var musicButton: UIButton!
@@ -59,6 +60,7 @@ class InitialScreenViewController: UIViewController {
             self.view.sendSubview(toBack: view)
             customView = view
         }
+        self.buttonName = screen.buttonName
         self.button.setImage(UIImage(named: screen.buttonName), for: .normal)
     }
     
@@ -71,4 +73,19 @@ class InitialScreenViewController: UIViewController {
         UserDefaultsManager.instance.setMusicState(to: !(UserDefaultsManager.instance.getMusicState()))
         self.updateMusicButton()
     }
+    
+    @IBAction func touchDown(_ sender: Any) {
+        self.button.setImage(UIImage(named: self.buttonName + "Pressed"), for: .normal)
+    }
+    
+    @IBAction func touchUpInside(_ sender: Any) {
+        self.button.setImage(UIImage(named: self.buttonName), for: .normal)
+    }
+    
+    @IBAction func touchUpOutside(_ sender: Any) {
+        self.button.setImage(UIImage(named: self.buttonName), for: .normal)
+    }
+    
+    
+    
 }

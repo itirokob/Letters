@@ -20,13 +20,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDo-Pk-Zcy">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDo-Pk-Zcy">
                                 <rect key="frame" x="112.5" y="456.5" width="150" height="150.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="iDo-Pk-Zcy" secondAttribute="height" multiplier="1:1" id="8f0-qE-50M"/>
                                 </constraints>
                                 <state key="normal" image="redButton"/>
                                 <connections>
+                                    <action selector="touchDown:" destination="pWR-q1-gLW" eventType="touchDown" id="ZBu-Hj-Mez"/>
+                                    <action selector="touchUpInside:" destination="pWR-q1-gLW" eventType="touchUpInside" id="Stx-iz-V6h"/>
+                                    <action selector="touchUpOutside:" destination="pWR-q1-gLW" eventType="touchUpOutside" id="meP-ga-MV2"/>
                                     <segue destination="Hj0-Hy-B7K" kind="show" id="ht4-Hm-gbZ"/>
                                 </connections>
                             </button>
@@ -208,7 +211,7 @@
     </scenes>
     <resources>
         <image name="music" width="50" height="50"/>
-        <image name="redButton" width="165" height="165"/>
+        <image name="redButton" width="1024" height="1024"/>
         <image name="sfx" width="50" height="50"/>
         <namedColor name="blue">
             <color red="0.11400000005960464" green="0.76899999380111694" blue="0.94099998474121094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
