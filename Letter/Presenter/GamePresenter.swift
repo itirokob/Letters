@@ -9,6 +9,10 @@
 import Foundation
 import ARKit
 
+// Shake Action - wrong letter pressed
+let offset: CGFloat = 0.1
+let shakeAction: SCNAction = SCNAction.sequence([SCNAction.moveBy(x: offset, y: 0, z: 0, duration: 0.1), SCNAction.moveBy(x: -offset, y: 0, z: 0, duration: 0.1), SCNAction.moveBy(x: offset, y: 0, z: 0, duration: 0.1), SCNAction.moveBy(x: -offset, y: 0, z: 0, duration: 0.1), SCNAction.moveBy(x: offset, y: 0, z: 0, duration: 0.1), SCNAction.moveBy(x: -offset, y: 0, z: 0, duration: 0.1)])
+
 protocol GamePresenterDelegate: class {
     /// If a plane is detected, we'll instantiate the object and the letters
     func instantiateNode(node: SCNNode, lettersNode: SCNNode)
@@ -69,6 +73,7 @@ class GamePresenter {
                     delegate?.endGame()
                 }
             } else {
+                nodePressed.runAction(shakeAction)
                 delegate?.wrongLetterPressed()
             }
         }

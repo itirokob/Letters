@@ -87,7 +87,6 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
         self.performSegue(withIdentifier: "showTutorialSegue", sender: self)
     }
     
-    
     /// Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "endGameSegue" {
@@ -180,7 +179,8 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
     func updateCorrectLetters(letter: String, index:Int, nodePressed: SCNNode) {
         self.correctLettersArray[index].letter.text = letter
         nodePressed.removeFromParentNode()
-        addConfetti(at: nodePressed.position)
+        // TODO: Restart the confetti's
+//        addConfetti(at: nodePressed.position)
     }
 
     /// When a wrong letter is pressed, we'll send a feedback to the user
