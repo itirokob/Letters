@@ -14,6 +14,13 @@ class ObjectModel {
     var name: String
     var hiddenImage: UIImage
     var image: UIImage
+    var textureName: String
+    var textureImage: UIImage {
+        if let image = UIImage(named: self.textureName) {
+            return image
+        }
+        return UIImage(named: "extraTexture")!
+    }
     var sceneName: String {
         return filename + ".scn"
     }
@@ -21,11 +28,12 @@ class ObjectModel {
         return filename
     }
     
-    init(id: String, name: String, filename: String, image: UIImage, hiddenImage: UIImage) {
+    init(id: String, name: String, filename: String, image: UIImage, hiddenImage: UIImage, textureName: String) {
         self.id = id
         self.name = name
         self.filename = filename
         self.image = image
         self.hiddenImage = hiddenImage
+        self.textureName = textureName
     }
 }

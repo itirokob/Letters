@@ -106,12 +106,15 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
             if wordArray.isEmpty == false {
                 if let nodeText = node.geometry as? SCNText {
                     nodeText.string = String(wordArray.first!)
+                    let colorMaterial = SCNMaterial()
+                    colorMaterial.diffuse.contents = self.objectModel?.textureImage
+                    nodeText.firstMaterial = colorMaterial
                     wordArray.remove(at: 0)
                 }
             }
         }
     }
-    
+
     /// Set the letter nodes text
     func feedLetters(){
         DispatchQueue.main.async {
