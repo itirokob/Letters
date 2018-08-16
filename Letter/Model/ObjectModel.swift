@@ -15,6 +15,7 @@ class ObjectModel {
     var hiddenImage: UIImage
     var image: UIImage
     var textureName: String
+    var pawImage: UIImage
     var textureImage: UIImage {
         if let image = UIImage(named: self.textureName) {
             return image
@@ -28,12 +29,13 @@ class ObjectModel {
         return filename
     }
     
-    init(id: String, name: String, filename: String, image: UIImage, hiddenImage: UIImage, textureName: String) {
+    init(id: String, name: String, filename: String, image: UIImage, hiddenImage: UIImage, textureName: String, paw: UIImage) {
         self.id = id
         self.name = name
         self.filename = filename
         self.image = image
         self.hiddenImage = hiddenImage
         self.textureName = textureName
+        self.pawImage = paw
     }
 }
