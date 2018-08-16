@@ -230,12 +230,20 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
     fileprivate func checkLetterPressed(_ position: CGPoint) {
         let hitList = sceneView.hitTest(position, options: nil)
         
+        if let node = hitList.first?.node {
+            if let nodePlane = node.geometry as? SCNPlane {
+                self.presenter?.foundPaw(position: node.position)
+                node.removeFromParentNode()
+            }
+        }
+        
         //The SCNText is the geometry parameter from node
         if let node = hitList.first?.node.parent {
             if let nodeText = node.geometry as? SCNText, let letter = nodeText.string as? String {
                 self.presenter?.letterPressed(letter: letter, nodePressed: node)
             }
         }
+        
     }
     
     /// Finish the Game

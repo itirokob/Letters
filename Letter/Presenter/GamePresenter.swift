@@ -48,14 +48,24 @@ class GamePresenter {
             return
         }
         //Primeiro deve aparecer a pata
-        
+        self.instantiatePaw(position: position)
         //Se houver clique na pata, instanciar o modelo 3D
+//        self.instantiate3DModel(position: position)
+    }
+    
+    func foundPaw(position: SCNVector3) {
         self.instantiate3DModel(position: position)
-        
     }
     
     func instantiatePaw(position: SCNVector3) {
+        let pawImage = objectModel.pawImage
+        let plane = SCNPlane(width: CGFloat(0.3), height: CGFloat(0.3))
+        let planeNode = SCNNode(geometry: plane)
+        planeNode.eulerAngles.x = -.pi/2
+        planeNode.position = position
+        planeNode.geometry?.firstMaterial?.diffuse.contents = pawImage
         
+        self.delegate?.instantiateNodes(nodes: [planeNode])
     }
     
     func instantiate3DModel(position: SCNVector3){
@@ -91,6 +101,7 @@ class GamePresenter {
             }
         }
     }
+
 }
 
 
