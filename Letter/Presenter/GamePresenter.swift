@@ -75,6 +75,11 @@ class GamePresenter {
         node.position = position
         self.mainNode = node
         
+        guard let lightsScene = SCNScene(named: "lights.scn"),
+            let lightsNode = lightsScene.rootNode.childNode(withName: "lightsNode", recursively: false)
+            else { return }
+        node.addChildNode(lightsNode)
+        
         guard let lettersScene = SCNScene(named: "spider.scn"),
             let lettersNode = lettersScene.rootNode.childNode(withName: "sphere", recursively: false)
             else { return }
@@ -82,7 +87,7 @@ class GamePresenter {
         
         self.delegate?.instantiate3DModel(node: node, lettersNode: lettersNode)
     }
-    
+     
     /// This func will be called when the user press a letter, we'll check if it's correct here
     ///
     /// - Parameter letter: letter pressed

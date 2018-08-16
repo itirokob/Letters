@@ -55,6 +55,7 @@
 		CB710D9221010DA300D41D53 /* CorrectLetter.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB710D9121010DA300D41D53 /* CorrectLetter.xib */; };
 		CB710D9421010EB700D41D53 /* CorrectLetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB710D9321010EB700D41D53 /* CorrectLetter.swift */; };
 		CB710D972101168C00D41D53 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB710D962101168C00D41D53 /* StringExtension.swift */; };
+		CBC7FBA02125BE6B00898C82 /* lights.scn in Resources */ = {isa = PBXBuildFile; fileRef = CBC7FB9F2125BE6600898C82 /* lights.scn */; };
 		CBDB4F7520FFC57600476C15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDB4F7420FFC57600476C15 /* AppDelegate.swift */; };
 		CBDB4F7720FFC57600476C15 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = CBDB4F7620FFC57600476C15 /* art.scnassets */; };
 		CBDB4F7920FFC57600476C15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDB4F7820FFC57600476C15 /* ViewController.swift */; };
@@ -119,6 +120,7 @@
 		CB710D9121010DA300D41D53 /* CorrectLetter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CorrectLetter.xib; sourceTree = "<group>"; };
 		CB710D9321010EB700D41D53 /* CorrectLetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectLetter.swift; sourceTree = "<group>"; };
 		CB710D962101168C00D41D53 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		CBC7FB9F2125BE6600898C82 /* lights.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = lights.scn; sourceTree = "<group>"; };
 		CBDB4F7120FFC57600476C15 /* Letter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Letter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBDB4F7420FFC57600476C15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBDB4F7620FFC57600476C15 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -423,6 +425,7 @@
 		CBDB4F932100BCC900476C15 /* spider */ = {
 			isa = PBXGroup;
 			children = (
+				CBC7FB9F2125BE6600898C82 /* lights.scn */,
 				CBDB4F982100BCD500476C15 /* haar_detail_NRM.jpg */,
 				CBDB4F952100BCD500476C15 /* SH3.png */,
 				CBDB4F942100BCD500476C15 /* spider.scn */,
@@ -522,6 +525,7 @@
 				CBDB4F9D2100BCD500476C15 /* haar_detail_NRM.jpg in Resources */,
 				CBDB4F9C2100BCD500476C15 /* Spinnen_Bein_tex_COLO.jpg in Resources */,
 				9BBB61672103D661004EF011 /* sheep.scn in Resources */,
+				CBC7FBA02125BE6B00898C82 /* lights.scn in Resources */,
 				CBDB4F7E20FFC57800476C15 /* Assets.xcassets in Resources */,
 				9B52D75F210282F20020C37D /* elephant.scn in Resources */,
 				9B25EE522100DC3400550423 /* forrest.xib in Resources */,
