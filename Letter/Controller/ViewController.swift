@@ -30,7 +30,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
     @IBOutlet weak var magnifier: UIImageView!
     @IBOutlet weak var animationView: UIImageView! {
         didSet {
-            animationView.animationImages = TutorialReference().cells[0].animationImages
+            animationView.animationImages = TutorialReference().pawAnimation
             animationView.animationDuration = 3.0
             animationView.startAnimating()
         }
