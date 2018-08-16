@@ -73,7 +73,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
         configuration.planeDetection = .horizontal
         
         sceneView.delegate = self
-        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
+//        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
 
         // Run the view's session
         sceneView.session.run(configuration)
