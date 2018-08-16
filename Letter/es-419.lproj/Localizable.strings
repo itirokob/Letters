@@ -6,19 +6,19 @@
   Copyright © 2018 Bianca Itiroko. All rights reserved.
 */
 
-"ELEPHANT" = "elephant";
-"DEER" = "deer";
+"ELEPHANT" = "elefante";
+"DEER" = "ciervo";
 "ROBOT" = "robot";
-"DOG" = "dog";
-"BEAR" = "bear";
-"GIRAFFE" = "giraffe";
-"FISH" = "fish";
-"SHEEP" = "sheep";
-"OCTOPUS" = "octopus";
-"OWL" = "owl";
+"DOG" = "perro";
+"BEAR" = "oso";
+"GIRAFFE" = "jirafa";
+"FISH" = "pescado";
+"SHEEP" = "oveja";
+"OCTOPUS" = "pulpo";
+"OWL" = "búho";
 
-"TUT_FIND" = "Find the character footprint";
-"TUT_TAP" = "Tap on the footprint!";
-"TUT_SHOW" = "Your character will show";
-"TUT_NAME" = "Find out it's name";
-"TUT_LETTER" = "Find all the letters of his name";
+"TUT_FIND" = "Encuentra la huella del personaje";
+"TUT_TAP" = "¡Toca la huella!";
+"TUT_SHOW" = "Tu personaje mostrará";
+"TUT_NAME" = "Descubra su nombre";
+"TUT_LETTER" = "Encuentra todas las letras de su nombre";

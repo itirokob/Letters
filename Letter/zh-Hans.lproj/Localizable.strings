@@ -6,19 +6,19 @@
   Copyright © 2018 Bianca Itiroko. All rights reserved.
 */
 
-"ELEPHANT" = "elephant";
-"DEER" = "deer";
-"ROBOT" = "robot";
-"DOG" = "dog";
-"BEAR" = "bear";
-"GIRAFFE" = "giraffe";
-"FISH" = "fish";
-"SHEEP" = "sheep";
-"OCTOPUS" = "octopus";
-"OWL" = "owl";
+"ELEPHANT" = "象";
+"DEER" = "鹿";
+"ROBOT" = "机器人";
+"DOG" = "狗";
+"BEAR" = "熊";
+"GIRAFFE" = "长颈鹿";
+"FISH" = "鱼";
+"SHEEP" = "羊";
+"OCTOPUS" = "章鱼";
+"OWL" = "猫头鹰";
 
-"TUT_FIND" = "Find the character footprint";
-"TUT_TAP" = "Tap on the footprint!";
-"TUT_SHOW" = "Your character will show";
-"TUT_NAME" = "Find out it's name";
-"TUT_LETTER" = "Find all the letters of his name";
+"TUT_FIND" = "找到角色足迹";
+"TUT_TAP" = "点击足迹！";
+"TUT_SHOW" = "你的角色会表现出来";
+"TUT_NAME" = "找出它的名字";
+"TUT_LETTER" = "找到他名字的所有字母";
