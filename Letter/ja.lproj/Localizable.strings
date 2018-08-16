@@ -6,19 +6,19 @@
   Copyright © 2018 Bianca Itiroko. All rights reserved.
 */
 
-"ELEPHANT" = "elephant";
-"DEER" = "deer";
-"ROBOT" = "robot";
-"DOG" = "dog";
-"BEAR" = "bear";
-"GIRAFFE" = "giraffe";
-"FISH" = "fish";
-"SHEEP" = "sheep";
-"OCTOPUS" = "octopus";
-"OWL" = "owl";
+"ELEPHANT" = "象";
+"DEER" = "鹿";
+"ROBOT" = "ロボット";
+"DOG" = "犬";
+"BEAR" = "くま";
+"GIRAFFE" = "キリン";
+"FISH" = "魚";
+"SHEEP" = "羊";
+"OCTOPUS" = "たこ";
+"OWL" = "フクロウ";
 
-"TUT_FIND" = "Find the character footprint";
-"TUT_TAP" = "Tap on the footprint!";
-"TUT_SHOW" = "Your character will show";
-"TUT_NAME" = "Find out it's name";
-"TUT_LETTER" = "Find all the letters of his name";
+"TUT_FIND" = "文字フットプリントを見つける";
+"TUT_TAP" = "足跡をタップ！";
+"TUT_SHOW" = "あなたのキャラクターが表示されます";
+"TUT_NAME" = "名前を見つける";
+"TUT_LETTER" = "彼の名前のすべての手紙を見つける";

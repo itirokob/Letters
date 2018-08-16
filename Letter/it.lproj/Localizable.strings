@@ -6,16 +6,16 @@
   Copyright © 2018 Bianca Itiroko. All rights reserved.
 */
 
-"ELEPHANT" = "elephant";
-"DEER" = "deer";
+"ELEPHANT" = "elefante";
+"DEER" = "cervo";
 "ROBOT" = "robot";
-"DOG" = "dog";
-"BEAR" = "bear";
-"GIRAFFE" = "giraffe";
-"FISH" = "fish";
-"SHEEP" = "sheep";
-"OCTOPUS" = "octopus";
-"OWL" = "owl";
+"DOG" = "cane";
+"BEAR" = "orso";
+"GIRAFFE" = "giraffa";
+"FISH" = "pesce";
+"SHEEP" = "pecora";
+"OCTOPUS" = "polpo";
+"OWL" = "gufo";
 
 "TUT_FIND" = "Find the character footprint";
 "TUT_TAP" = "Tap on the footprint!";
