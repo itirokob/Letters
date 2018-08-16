@@ -53,6 +53,7 @@
 		9BE04F0A2125F09700F883A9 /* spider.scn in Resources */ = {isa = PBXBuildFile; fileRef = 9BE04F092125F09700F883A9 /* spider.scn */; };
 		9BE04F0F2125F98700F883A9 /* arrowzinha.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE04F0E2125F98700F883A9 /* arrowzinha.png */; };
 		9BE04F112125FA7200F883A9 /* arrow.scn in Resources */ = {isa = PBXBuildFile; fileRef = 9BE04F102125F99200F883A9 /* arrow.scn */; };
+		9BE04F162126007000F883A9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BE04F182126007000F883A9 /* Localizable.strings */; };
 		CB2F9B4021020BA90029889A /* Float4x4Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2F9B3F21020BA90029889A /* Float4x4Extension.swift */; };
 		CB2F9B41210212030029889A /* robot.scn in Resources */ = {isa = PBXBuildFile; fileRef = 9B25EE612102099200550423 /* robot.scn */; };
 		CB710D9221010DA300D41D53 /* CorrectLetter.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB710D9121010DA300D41D53 /* CorrectLetter.xib */; };
@@ -121,6 +122,10 @@
 		9BE04F092125F09700F883A9 /* spider.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = spider.scn; sourceTree = "<group>"; };
 		9BE04F0E2125F98700F883A9 /* arrowzinha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrowzinha.png; sourceTree = "<group>"; };
 		9BE04F102125F99200F883A9 /* arrow.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = arrow.scn; sourceTree = "<group>"; };
+		9BE04F122126000A00F883A9 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		9BE04F132126000A00F883A9 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		9BE04F172126007000F883A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9BE04F192126007300F883A9 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		CB2F9B3F21020BA90029889A /* Float4x4Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Float4x4Extension.swift; sourceTree = "<group>"; };
 		CB710D9121010DA300D41D53 /* CorrectLetter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CorrectLetter.xib; sourceTree = "<group>"; };
 		CB710D9321010EB700D41D53 /* CorrectLetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectLetter.swift; sourceTree = "<group>"; };
@@ -355,6 +360,7 @@
 			isa = PBXGroup;
 			children = (
 				CBDB4F7420FFC57600476C15 /* AppDelegate.swift */,
+				9BE04F182126007000F883A9 /* Localizable.strings */,
 				CBDB4F8A20FFC58F00476C15 /* Model */,
 				CBDB4F8920FFC58D00476C15 /* View */,
 				CB710D952101166E00D41D53 /* Extension */,
@@ -492,6 +498,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = CBDB4F6820FFC57600476C15;
 			productRefGroup = CBDB4F7220FFC57600476C15 /* Products */;
@@ -516,6 +523,7 @@
 				CB2F9B41210212030029889A /* robot.scn in Resources */,
 				9B785D2221023A29004E4CE4 /* EndGame.storyboard in Resources */,
 				9B25EE602102090100550423 /* robot.png in Resources */,
+				9BE04F162126007000F883A9 /* Localizable.strings in Resources */,
 				9BC8680321027CAE00A3F4AB /* bear.png in Resources */,
 				CBDB4F9B2100BCD500476C15 /* Spinnen_Bein_tex_2.jp.jpg in Resources */,
 				9BE04F112125FA7200F883A9 /* arrow.scn in Resources */,
@@ -588,10 +596,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		9BE04F182126007000F883A9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BE04F172126007000F883A9 /* en */,
+				9BE04F192126007300F883A9 /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		CBDB4F7A20FFC57600476C15 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CBDB4F7B20FFC57600476C15 /* Base */,
+				9BE04F122126000A00F883A9 /* pt-BR */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -600,6 +618,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CBDB4F8020FFC57800476C15 /* Base */,
+				9BE04F132126000A00F883A9 /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -611,6 +630,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -671,6 +691,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

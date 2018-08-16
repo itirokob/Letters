@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  Letter
+
+  Created by Giovani Nascimento Pereira on 16/08/18.
+  Copyright © 2018 Bianca Itiroko. All rights reserved.
+*/
+
+"ELEPHANT" = "elefante";
+"DEER" = "alce";
+"ROBOT" = "robô";
+"DOG" = "cachorro";
+"BEAR" = "urso";
+"GIRAFFE" = "girafa";
+"FISH" = "peixe";
+"SHEEP" = "ovelha";
+"OCTOPUS" = "polvo";
+"OWL" = "coruja";
+
+"TUT_FIND" = "Encontre a pegada do animal";
+"TUT_TAP" = "Bata na pegada!";
+"TUT_SHOW" = "O seu personagem irá aparecer";
+"TUT_NAME" = "Descubra qual o nome do personagem";
+"TUT_LETTER" = "Encontre as letras que formam seu nome";
