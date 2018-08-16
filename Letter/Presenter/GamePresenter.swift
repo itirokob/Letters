@@ -12,6 +12,7 @@ import ARKit
 // Shake Action - wrong letter pressed
 let offset: CGFloat = 0.1
 let shakeAction: SCNAction = SCNAction.sequence([SCNAction.moveBy(x: offset, y: 0, z: 0, duration: 0.1), SCNAction.moveBy(x: -offset, y: 0, z: 0, duration: 0.1), SCNAction.moveBy(x: offset, y: 0, z: 0, duration: 0.1), SCNAction.moveBy(x: -offset, y: 0, z: 0, duration: 0.1), SCNAction.moveBy(x: offset, y: 0, z: 0, duration: 0.1), SCNAction.moveBy(x: -offset, y: 0, z: 0, duration: 0.1)])
+let pointAction: SCNAction = SCNAction.repeatForever(SCNAction.sequence([SCNAction.moveBy(x: 0, y: offset, z: 0, duration: 0.3), SCNAction.moveBy(x: 0, y: -offset, z: 0, duration: 0.3)]]))
 
 protocol GamePresenterDelegate: class {
     /// If a plane is detected, we'll instantiate the object and the letters
@@ -65,7 +66,13 @@ class GamePresenter {
         planeNode.position = position
         planeNode.geometry?.firstMaterial?.diffuse.contents = pawImage
         
-        self.delegate?.instantiateNodes(nodes: [planeNode])
+        guard let arrowScene = SCNScene(named: "arrow.scn"),
+            let arrowNode = arrowScene.rootNode.childNode(withName: "arrow", recursively: false)
+            else { return }
+        
+        arrowNode.runAction(pointAction)
+        
+        self.delegate?.instantiateNodes(nodes: [planeNode, arrowNode])
     }
     
     func instantiate3DModel(position: SCNVector3){

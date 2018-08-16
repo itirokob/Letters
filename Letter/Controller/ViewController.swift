@@ -227,11 +227,11 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
     /// This func gets the letter from node pressed and check if it's correct
     ///
     /// - Parameter position: position where the user pressed
-    fileprivate func checkLetterPressed(_ position: CGPoint) {
+    fileprivate func checkNodeTouched(_ position: CGPoint) {
         let hitList = sceneView.hitTest(position, options: nil)
         
         if let node = hitList.first?.node {
-            if let nodePlane = node.geometry as? SCNPlane {
+            if (node.geometry as? SCNPlane) != nil {
                 self.presenter?.foundPaw(position: node.position)
                 node.removeFromParentNode()
             }
@@ -255,7 +255,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
             let position = touch.location(in: sceneView)
-            self.checkLetterPressed(position)
+            self.checkNodeTouched(position)
         }
     }
     
