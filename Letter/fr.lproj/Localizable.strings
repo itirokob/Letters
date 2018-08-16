@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  Letter
+
+  Created by Giovani Nascimento Pereira on 16/08/18.
+  Copyright © 2018 Bianca Itiroko. All rights reserved.
+*/
+
+"ELEPHANT" = "elephant";
+"DEER" = "deer";
+"ROBOT" = "robot";
+"DOG" = "dog";
+"BEAR" = "bear";
+"GIRAFFE" = "giraffe";
+"FISH" = "fish";
+"SHEEP" = "sheep";
+"OCTOPUS" = "octopus";
+"OWL" = "owl";
+
+"TUT_FIND" = "Find the character footprint";
+"TUT_TAP" = "Tap on the footprint!";
+"TUT_SHOW" = "Your character will show";
+"TUT_NAME" = "Find out it's name";
+"TUT_LETTER" = "Find all the letters of his name";
