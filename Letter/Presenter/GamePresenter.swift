@@ -12,7 +12,7 @@ import ARKit
 // Shake Action - wrong letter pressed
 let offset: CGFloat = 0.1
 let shakeAction: SCNAction = SCNAction.sequence([SCNAction.moveBy(x: offset, y: 0, z: 0, duration: 0.1), SCNAction.moveBy(x: -offset, y: 0, z: 0, duration: 0.1), SCNAction.moveBy(x: offset, y: 0, z: 0, duration: 0.1), SCNAction.moveBy(x: -offset, y: 0, z: 0, duration: 0.1), SCNAction.moveBy(x: offset, y: 0, z: 0, duration: 0.1), SCNAction.moveBy(x: -offset, y: 0, z: 0, duration: 0.1)])
-let pointAction: SCNAction = SCNAction.repeatForever(SCNAction.sequence([SCNAction.moveBy(x: 0, y: offset, z: 0, duration: 0.3), SCNAction.moveBy(x: 0, y: -offset, z: 0, duration: 0.3)]]))
+let pointAction: SCNAction = SCNAction.repeatForever(SCNAction.sequence([SCNAction.moveBy(x: 0, y: offset, z: 0, duration: 0.5), SCNAction.moveBy(x: 0, y: -offset, z: 0, duration: 0.5)]))
 
 protocol GamePresenterDelegate: class {
     /// If a plane is detected, we'll instantiate the object and the letters
@@ -35,6 +35,7 @@ class GamePresenter {
     weak var delegate:GamePresenterDelegate?
     var mainNode:SCNNode?
     var correctCounter:Int = 0
+    var arrow: SCNNode?
     
     init(objectModel:ObjectModel, delegate:GamePresenterDelegate) {
         self.objectModel = objectModel
@@ -56,6 +57,7 @@ class GamePresenter {
     
     func foundPaw(position: SCNVector3) {
         self.instantiate3DModel(position: position)
+        arrow?.removeFromParentNode()
     }
     
     func instantiatePaw(position: SCNVector3) {
@@ -71,6 +73,9 @@ class GamePresenter {
             else { return }
         
         arrowNode.runAction(pointAction)
+        arrowNode.position = SCNVector3(x: position.x, y: position.y + 0.5, z: position.z)
+        
+        self.arrow = arrowNode
         
         self.delegate?.instantiateNodes(nodes: [planeNode, arrowNode])
     }

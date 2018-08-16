@@ -52,6 +52,7 @@
 		9BD1E03521053C26002FE68D /* ConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD1E03421053C26002FE68D /* ConfettiView.swift */; };
 		9BE04F0A2125F09700F883A9 /* spider.scn in Resources */ = {isa = PBXBuildFile; fileRef = 9BE04F092125F09700F883A9 /* spider.scn */; };
 		9BE04F0F2125F98700F883A9 /* arrowzinha.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE04F0E2125F98700F883A9 /* arrowzinha.png */; };
+		9BE04F112125FA7200F883A9 /* arrow.scn in Resources */ = {isa = PBXBuildFile; fileRef = 9BE04F102125F99200F883A9 /* arrow.scn */; };
 		CB2F9B4021020BA90029889A /* Float4x4Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2F9B3F21020BA90029889A /* Float4x4Extension.swift */; };
 		CB2F9B41210212030029889A /* robot.scn in Resources */ = {isa = PBXBuildFile; fileRef = 9B25EE612102099200550423 /* robot.scn */; };
 		CB710D9221010DA300D41D53 /* CorrectLetter.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB710D9121010DA300D41D53 /* CorrectLetter.xib */; };
@@ -517,6 +518,7 @@
 				9B25EE602102090100550423 /* robot.png in Resources */,
 				9BC8680321027CAE00A3F4AB /* bear.png in Resources */,
 				CBDB4F9B2100BCD500476C15 /* Spinnen_Bein_tex_2.jp.jpg in Resources */,
+				9BE04F112125FA7200F883A9 /* arrow.scn in Resources */,
 				9B785D1B21021BCC004E4CE4 /* spark.png in Resources */,
 				9BBB61512103B3BA004EF011 /* octopus.png in Resources */,
 				9BC868002102766A00A3F4AB /* dog.scn in Resources */,
