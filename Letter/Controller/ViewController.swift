@@ -27,6 +27,14 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
 
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var fxView: UIVisualEffectView!
+    @IBOutlet weak var magnifier: UIImageView!
+    @IBOutlet weak var animationView: UIImageView! {
+        didSet {
+            animationView.animationImages = TutorialReference().cells[0].animationImages
+            animationView.animationDuration = 3.0
+            animationView.startAnimating()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -144,10 +152,19 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
     
     /// When we have already put the 3D object, we don't need to detect planes anymore
     func stopPlaneDetection(){
+        hideMagnifier()
         let configuration = ARWorldTrackingConfiguration()
         configuration.planeDetection = .init(rawValue: 0)
         self.sceneView.session.run(configuration)
         self.sceneView.debugOptions = []
+    }
+    
+    /// Hide the animation and the magnifier images
+    func hideMagnifier() {
+        DispatchQueue.main.async {
+            self.magnifier.isHidden = true
+            self.animationView.isHidden = true
+        }
     }
 
     // MARK: - ARSCNViewDelegate
