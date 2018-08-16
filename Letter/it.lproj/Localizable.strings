@@ -17,8 +17,8 @@
 "OCTOPUS" = "polpo";
 "OWL" = "gufo";
 
-"TUT_FIND" = "Find the character footprint";
-"TUT_TAP" = "Tap on the footprint!";
-"TUT_SHOW" = "Your character will show";
-"TUT_NAME" = "Find out it's name";
-"TUT_LETTER" = "Find all the letters of his name";
+"TUT_FIND" = "Trova l'impronta del personaggio";
+"TUT_TAP" = "Tocca l'impronta!";
+"TUT_SHOW" = "Il tuo personaggio mostrerà";
+"TUT_NAME" = "Scopri il suo nome";
+"TUT_LETTER" = "Trova tutte le lettere del suo nome";
