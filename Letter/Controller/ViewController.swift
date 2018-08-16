@@ -164,12 +164,16 @@ class ViewController: UIViewController, ARSCNViewDelegate, GamePresenterDelegate
     /// - Parameters:
     ///   - node: object node to be instantiated
     ///   - lettersNode: letter's node to be instatiated
-    func instantiateNode(node: SCNNode, lettersNode: SCNNode) {
-        sceneView.scene.rootNode.addChildNode(node)
-        sceneView.scene.rootNode.addChildNode(lettersNode)
+    func instantiate3DModel(node: SCNNode, lettersNode: SCNNode) {
+        self.instantiateNodes(nodes: [node, lettersNode])
         self.lettersNode = lettersNode
-        
         self.feedLetters()
+    }
+    
+    func instantiateNodes(nodes: [SCNNode]) {
+        for node in nodes {
+            sceneView.scene.rootNode.addChildNode(node)
+        }
     }
 
     /// When user hits the correct letter,

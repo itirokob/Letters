@@ -15,7 +15,9 @@ let shakeAction: SCNAction = SCNAction.sequence([SCNAction.moveBy(x: offset, y: 
 
 protocol GamePresenterDelegate: class {
     /// If a plane is detected, we'll instantiate the object and the letters
-    func instantiateNode(node: SCNNode, lettersNode: SCNNode)
+    func instantiate3DModel(node: SCNNode, lettersNode: SCNNode)
+    
+    func instantiateNodes(nodes: [SCNNode])
     
     /// When user hits the correct letter, we'll update the display of letters in the screen
     func updateCorrectLetters(letter:String, index:Int, nodePressed: SCNNode)
@@ -45,7 +47,18 @@ class GamePresenter {
         if self.mainNode != nil {
             return
         }
-
+        //Primeiro deve aparecer a pata
+        
+        //Se houver clique na pata, instanciar o modelo 3D
+        self.instantiate3DModel(position: position)
+        
+    }
+    
+    func instantiatePaw(position: SCNVector3) {
+        
+    }
+    
+    func instantiate3DModel(position: SCNVector3){
         guard let scene = SCNScene(named: objectModel.sceneName),
             let node = scene.rootNode.childNode(withName: objectModel.nodeName, recursively: false)
             else { return }
@@ -57,7 +70,7 @@ class GamePresenter {
             else { return }
         lettersNode.position = position
         
-        self.delegate?.instantiateNode(node: node, lettersNode: lettersNode)
+        self.delegate?.instantiate3DModel(node: node, lettersNode: lettersNode)
     }
     
     /// This func will be called when the user press a letter, we'll check if it's correct here
