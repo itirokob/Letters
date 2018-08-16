@@ -6,19 +6,19 @@
   Copyright © 2018 Bianca Itiroko. All rights reserved.
 */
 
-"ELEPHANT" = "elephant";
-"DEER" = "deer";
-"ROBOT" = "robot";
-"DOG" = "dog";
-"BEAR" = "bear";
-"GIRAFFE" = "giraffe";
-"FISH" = "fish";
-"SHEEP" = "sheep";
-"OCTOPUS" = "octopus";
-"OWL" = "owl";
+"ELEPHANT" = "코끼리";
+"DEER" = "사슴";
+"ROBOT" = "기계 인간";
+"DOG" = "개";
+"BEAR" = "곰";
+"GIRAFFE" = "기린";
+"FISH" = "물고기";
+"SHEEP" = "양";
+"OCTOPUS" = "문어";
+"OWL" = "올빼미";
 
-"TUT_FIND" = "Find the character footprint";
-"TUT_TAP" = "Tap on the footprint!";
-"TUT_SHOW" = "Your character will show";
-"TUT_NAME" = "Find out it's name";
-"TUT_LETTER" = "Find all the letters of his name";
+"TUT_FIND" = "캐릭터 풋 프린트 찾기";
+"TUT_TAP" = "발자국을 탭하십시오!";
+"TUT_SHOW" = "캐릭터가 표시됩니다.";
+"TUT_NAME" = "이름을 알아 내라.";
+"TUT_LETTER" = "그의 이름의 모든 문자를 찾으십시오.";
