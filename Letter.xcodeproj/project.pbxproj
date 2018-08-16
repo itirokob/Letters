@@ -51,6 +51,7 @@
 		9BD1E03321053AED002FE68D /* kids_cheer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9BD1E03221053AED002FE68D /* kids_cheer.mp3 */; };
 		9BD1E03521053C26002FE68D /* ConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD1E03421053C26002FE68D /* ConfettiView.swift */; };
 		9BE04F0A2125F09700F883A9 /* spider.scn in Resources */ = {isa = PBXBuildFile; fileRef = 9BE04F092125F09700F883A9 /* spider.scn */; };
+		9BE04F0F2125F98700F883A9 /* arrowzinha.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE04F0E2125F98700F883A9 /* arrowzinha.png */; };
 		CB2F9B4021020BA90029889A /* Float4x4Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2F9B3F21020BA90029889A /* Float4x4Extension.swift */; };
 		CB2F9B41210212030029889A /* robot.scn in Resources */ = {isa = PBXBuildFile; fileRef = 9B25EE612102099200550423 /* robot.scn */; };
 		CB710D9221010DA300D41D53 /* CorrectLetter.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB710D9121010DA300D41D53 /* CorrectLetter.xib */; };
@@ -117,6 +118,8 @@
 		9BD1E03221053AED002FE68D /* kids_cheer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kids_cheer.mp3; sourceTree = "<group>"; };
 		9BD1E03421053C26002FE68D /* ConfettiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfettiView.swift; sourceTree = "<group>"; };
 		9BE04F092125F09700F883A9 /* spider.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = spider.scn; sourceTree = "<group>"; };
+		9BE04F0E2125F98700F883A9 /* arrowzinha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrowzinha.png; sourceTree = "<group>"; };
+		9BE04F102125F99200F883A9 /* arrow.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = arrow.scn; sourceTree = "<group>"; };
 		CB2F9B3F21020BA90029889A /* Float4x4Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Float4x4Extension.swift; sourceTree = "<group>"; };
 		CB710D9121010DA300D41D53 /* CorrectLetter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CorrectLetter.xib; sourceTree = "<group>"; };
 		CB710D9321010EB700D41D53 /* CorrectLetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectLetter.swift; sourceTree = "<group>"; };
@@ -312,6 +315,15 @@
 			path = SFX;
 			sourceTree = "<group>";
 		};
+		9BE04F0B2125F91300F883A9 /* Arrow */ = {
+			isa = PBXGroup;
+			children = (
+				9BE04F0E2125F98700F883A9 /* arrowzinha.png */,
+				9BE04F102125F99200F883A9 /* arrow.scn */,
+			);
+			path = Arrow;
+			sourceTree = "<group>";
+		};
 		CB710D952101166E00D41D53 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -406,6 +418,7 @@
 		CBDB4F922100BB1100476C15 /* 3D Models */ = {
 			isa = PBXGroup;
 			children = (
+				9BE04F0B2125F91300F883A9 /* Arrow */,
 				9BBB615A2103C787004EF011 /* Owl */,
 				9BBB614E2103B332004EF011 /* Octopus */,
 				9BBB613E21039A5D004EF011 /* Sheep */,
@@ -514,6 +527,7 @@
 				9B52D766210288810020C37D /* giraffe.scn in Resources */,
 				9B25EE542100DD7800550423 /* india.xib in Resources */,
 				9BE04F0A2125F09700F883A9 /* spider.scn in Resources */,
+				9BE04F0F2125F98700F883A9 /* arrowzinha.png in Resources */,
 				9BC867F9210270FC00A3F4AB /* deer.scn in Resources */,
 				9BBB61592103B4C3004EF011 /* octopus.scn in Resources */,
 				CBDB4F8120FFC57800476C15 /* LaunchScreen.storyboard in Resources */,
@@ -710,7 +724,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GJ5VL7QF9C;
+				DEVELOPMENT_TEAM = 2ECVV26Q6C;
 				INFOPLIST_FILE = Letter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -729,7 +743,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GJ5VL7QF9C;
+				DEVELOPMENT_TEAM = 2ECVV26Q6C;
 				INFOPLIST_FILE = Letter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
