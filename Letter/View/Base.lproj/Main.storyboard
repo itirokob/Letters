@@ -36,7 +36,7 @@
                                 <color key="backgroundColor" name="green"/>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifierFrame" translatesAutoresizingMaskIntoConstraints="NO" id="ozL-5C-2F3">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="-1" y="-1" width="377" height="669"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DUe-mh-cvw">
                                 <rect key="frame" x="10" y="537" width="120" height="120"/>
@@ -91,19 +91,19 @@
                             <constraint firstItem="iT9-bK-d96" firstAttribute="height" secondItem="AQE-f4-SyQ" secondAttribute="height" id="38I-wH-wTE"/>
                             <constraint firstItem="0JI-04-0ez" firstAttribute="top" secondItem="75s-T9-MXf" secondAttribute="top" id="4hu-sm-JQ8"/>
                             <constraint firstItem="XCo-Mw-m00" firstAttribute="width" secondItem="XCo-Mw-m00" secondAttribute="height" multiplier="1:1" id="6M0-R2-xhM"/>
-                            <constraint firstItem="ozL-5C-2F3" firstAttribute="leading" secondItem="wah-ed-7xa" secondAttribute="leading" id="ARL-TB-k1E"/>
+                            <constraint firstItem="ozL-5C-2F3" firstAttribute="leading" secondItem="wah-ed-7xa" secondAttribute="leading" constant="-1" id="ARL-TB-k1E"/>
                             <constraint firstItem="0JI-04-0ez" firstAttribute="trailing" secondItem="wah-ed-7xa" secondAttribute="trailing" id="JnQ-HM-Qte"/>
                             <constraint firstItem="ocT-gY-8JI" firstAttribute="centerX" secondItem="bZO-kH-bjm" secondAttribute="centerX" id="KVy-fT-Ii0"/>
-                            <constraint firstAttribute="bottom" secondItem="ozL-5C-2F3" secondAttribute="bottom" id="L5r-Ee-HUz"/>
+                            <constraint firstAttribute="bottom" secondItem="ozL-5C-2F3" secondAttribute="bottom" constant="-1" id="L5r-Ee-HUz"/>
                             <constraint firstItem="ocT-gY-8JI" firstAttribute="top" secondItem="XCo-Mw-m00" secondAttribute="bottom" constant="10" id="LLH-rP-TU0"/>
                             <constraint firstItem="AQE-f4-SyQ" firstAttribute="height" secondItem="0JI-04-0ez" secondAttribute="height" multiplier="0.1" id="Lqp-OH-mkj"/>
                             <constraint firstItem="DUe-mh-cvw" firstAttribute="leading" secondItem="wah-ed-7xa" secondAttribute="leading" constant="10" id="OHU-P5-8oL"/>
-                            <constraint firstItem="wah-ed-7xa" firstAttribute="trailing" secondItem="ozL-5C-2F3" secondAttribute="trailing" id="TPW-tX-2Gh"/>
+                            <constraint firstItem="wah-ed-7xa" firstAttribute="trailing" secondItem="ozL-5C-2F3" secondAttribute="trailing" constant="-1" id="TPW-tX-2Gh"/>
                             <constraint firstItem="wah-ed-7xa" firstAttribute="bottom" secondItem="DUe-mh-cvw" secondAttribute="bottom" constant="10" id="YPi-KP-fRM"/>
                             <constraint firstItem="AQE-f4-SyQ" firstAttribute="trailing" secondItem="wah-ed-7xa" secondAttribute="trailing" id="aHP-3L-le6"/>
                             <constraint firstItem="AQE-f4-SyQ" firstAttribute="leading" secondItem="wah-ed-7xa" secondAttribute="leading" id="bGm-zO-z5Z"/>
                             <constraint firstItem="0JI-04-0ez" firstAttribute="leading" secondItem="wah-ed-7xa" secondAttribute="leading" id="cZo-Ky-CK5"/>
-                            <constraint firstItem="ozL-5C-2F3" firstAttribute="top" secondItem="75s-T9-MXf" secondAttribute="top" id="cyX-PV-4eC"/>
+                            <constraint firstItem="ozL-5C-2F3" firstAttribute="top" secondItem="75s-T9-MXf" secondAttribute="top" constant="-1" id="cyX-PV-4eC"/>
                             <constraint firstItem="iT9-bK-d96" firstAttribute="width" secondItem="AQE-f4-SyQ" secondAttribute="width" id="iay-Yb-OAf"/>
                             <constraint firstItem="AQE-f4-SyQ" firstAttribute="bottom" secondItem="wah-ed-7xa" secondAttribute="bottom" id="lws-qQ-mAs"/>
                             <constraint firstItem="iT9-bK-d96" firstAttribute="centerY" secondItem="AQE-f4-SyQ" secondAttribute="centerY" id="mDe-Sn-SqQ"/>
