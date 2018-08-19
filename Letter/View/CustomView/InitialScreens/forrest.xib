@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -18,15 +17,25 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forrest" translatesAutoresizingMaskIntoConstraints="NO" id="8IY-hS-9MD">
-                    <rect key="frame" x="-0.5" y="-6.5" width="375" height="700"/>
+                    <rect key="frame" x="-0.5" y="-23.5" width="375" height="734"/>
                 </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NbF-u9-GzC">
+                    <rect key="frame" x="0.0" y="667" width="375" height="200"/>
+                    <color key="backgroundColor" red="0.13725490196078433" green="0.70588235294117652" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="XU1-Ir-5nb"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="8IY-hS-9MD" firstAttribute="height" secondItem="SBy-p3-niD" secondAttribute="height" multiplier="1.05" id="5jA-YL-YGT"/>
+                <constraint firstItem="8IY-hS-9MD" firstAttribute="height" secondItem="SBy-p3-niD" secondAttribute="height" multiplier="1.1" id="5jA-YL-YGT"/>
+                <constraint firstItem="BNm-1h-2KP" firstAttribute="trailing" secondItem="NbF-u9-GzC" secondAttribute="trailing" id="E5Q-vT-Gwf"/>
+                <constraint firstItem="NbF-u9-GzC" firstAttribute="leading" secondItem="BNm-1h-2KP" secondAttribute="leading" id="FSh-94-jkJ"/>
                 <constraint firstItem="8IY-hS-9MD" firstAttribute="centerY" secondItem="BNm-1h-2KP" secondAttribute="centerY" id="fjr-GW-QjM"/>
                 <constraint firstItem="8IY-hS-9MD" firstAttribute="centerX" secondItem="BNm-1h-2KP" secondAttribute="centerX" id="qBL-fu-OHG"/>
                 <constraint firstItem="8IY-hS-9MD" firstAttribute="width" secondItem="SBy-p3-niD" secondAttribute="width" id="rgZ-Bs-Rbk"/>
+                <constraint firstAttribute="bottom" secondItem="NbF-u9-GzC" secondAttribute="bottom" constant="-200" id="stv-8O-KCs"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="BNm-1h-2KP"/>
         </view>

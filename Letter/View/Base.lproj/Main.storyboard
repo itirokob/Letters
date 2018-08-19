@@ -6,7 +6,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -36,7 +35,7 @@
                                 <rect key="frame" x="0.0" y="600.5" width="375" height="66.5"/>
                                 <color key="backgroundColor" name="green"/>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifierFrame" translatesAutoresizingMaskIntoConstraints="NO" id="ozL-5C-2F3">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifierFrame" translatesAutoresizingMaskIntoConstraints="NO" id="ozL-5C-2F3">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DUe-mh-cvw">
@@ -91,11 +90,11 @@
                             <constraint firstItem="XCo-Mw-m00" firstAttribute="top" secondItem="75s-T9-MXf" secondAttribute="top" constant="20" id="0IB-XO-Mee"/>
                             <constraint firstItem="iT9-bK-d96" firstAttribute="height" secondItem="AQE-f4-SyQ" secondAttribute="height" id="38I-wH-wTE"/>
                             <constraint firstItem="0JI-04-0ez" firstAttribute="top" secondItem="75s-T9-MXf" secondAttribute="top" id="4hu-sm-JQ8"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="ozL-5C-2F3" secondAttribute="bottom" id="4ok-E3-p2Z"/>
                             <constraint firstItem="XCo-Mw-m00" firstAttribute="width" secondItem="XCo-Mw-m00" secondAttribute="height" multiplier="1:1" id="6M0-R2-xhM"/>
                             <constraint firstItem="ozL-5C-2F3" firstAttribute="leading" secondItem="wah-ed-7xa" secondAttribute="leading" id="ARL-TB-k1E"/>
                             <constraint firstItem="0JI-04-0ez" firstAttribute="trailing" secondItem="wah-ed-7xa" secondAttribute="trailing" id="JnQ-HM-Qte"/>
                             <constraint firstItem="ocT-gY-8JI" firstAttribute="centerX" secondItem="bZO-kH-bjm" secondAttribute="centerX" id="KVy-fT-Ii0"/>
+                            <constraint firstAttribute="bottom" secondItem="ozL-5C-2F3" secondAttribute="bottom" id="L5r-Ee-HUz"/>
                             <constraint firstItem="ocT-gY-8JI" firstAttribute="top" secondItem="XCo-Mw-m00" secondAttribute="bottom" constant="10" id="LLH-rP-TU0"/>
                             <constraint firstItem="AQE-f4-SyQ" firstAttribute="height" secondItem="0JI-04-0ez" secondAttribute="height" multiplier="0.1" id="Lqp-OH-mkj"/>
                             <constraint firstItem="DUe-mh-cvw" firstAttribute="leading" secondItem="wah-ed-7xa" secondAttribute="leading" constant="10" id="OHU-P5-8oL"/>
